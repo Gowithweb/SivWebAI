@@ -19,9 +19,10 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-foreground hover:text-primary transition-colors">Services</a>
+            <a href="#domains" className="text-foreground hover:text-primary transition-colors">Domains</a>
+            <a href="#services" className="text-foreground hover:text-primary transition-colors">Hosting</a>
+            <a href="#web-development" className="text-foreground hover:text-primary transition-colors">Development</a>
             <a href="#features" className="text-foreground hover:text-primary transition-colors">Features</a>
-            <a href="#pricing" className="text-foreground hover:text-primary transition-colors">Pricing</a>
             <a href="#testimonials" className="text-foreground hover:text-primary transition-colors">Reviews</a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
           </nav>
@@ -47,9 +48,10 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md">
             <nav className="flex flex-col space-y-4">
-              <a href="#services" className="text-foreground hover:text-primary transition-colors">Services</a>
+              <a href="#domains" className="text-foreground hover:text-primary transition-colors">Domains</a>
+              <a href="#services" className="text-foreground hover:text-primary transition-colors">Hosting</a>
+              <a href="#web-development" className="text-foreground hover:text-primary transition-colors">Development</a>
               <a href="#features" className="text-foreground hover:text-primary transition-colors">Features</a>
-              <a href="#pricing" className="text-foreground hover:text-primary transition-colors">Pricing</a>
               <a href="#testimonials" className="text-foreground hover:text-primary transition-colors">Reviews</a>
               <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
               <div className="flex flex-col space-y-2 pt-4 border-t border-border">

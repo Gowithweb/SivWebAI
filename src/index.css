@@ -18,18 +18,29 @@ All colors MUST be HSL for consistency.
     --popover: 0 0% 100%;
     --popover-foreground: 220 13% 18%;
 
-    /* Primary - Deep Tech Blue */
-    --primary: 210 100% 20%;
+    /* Primary - Modern Blue Gradient */
+    --primary: 230 85% 45%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 210 100% 35%;
+    --primary-glow: 230 85% 65%;
+    --primary-dark: 230 85% 35%;
 
-    /* Secondary - Vibrant Teal */
-    --secondary: 180 100% 25%;
+    /* Secondary - Electric Purple */
+    --secondary: 270 85% 55%;
     --secondary-foreground: 0 0% 100%;
+    --secondary-glow: 270 85% 75%;
 
-    /* Success - Growth Green */
-    --success: 142 76% 36%;
+    /* Accent - Vibrant Cyan */
+    --accent-bright: 180 100% 50%;
+    --accent-bright-foreground: 220 13% 18%;
+
+    /* Success - Modern Green */
+    --success: 145 80% 42%;
     --success-foreground: 0 0% 100%;
+    --success-glow: 145 80% 62%;
+
+    /* Warning - Golden Orange */
+    --warning: 38 95% 58%;
+    --warning-foreground: 220 13% 18%;
 
     /* Muted tones */
     --muted: 220 14% 96%;
@@ -48,16 +59,22 @@ All colors MUST be HSL for consistency.
     /* Design System Enhancements */
     --radius: 0.75rem;
 
-    /* Gradients for modern appeal */
-    --gradient-primary: linear-gradient(135deg, hsl(210 100% 20%) 0%, hsl(180 100% 25%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 15%) 0%, hsl(180 100% 20%) 50%, hsl(210 100% 25%) 100%);
+    /* Modern Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(230 85% 45%) 0%, hsl(270 85% 55%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(230 85% 35%) 0%, hsl(270 85% 45%) 50%, hsl(180 100% 50%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 14% 98%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(180 100% 50%) 0%, hsl(230 85% 65%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(145 80% 42%) 0%, hsl(145 80% 62%) 100%);
+    --gradient-glow: radial-gradient(circle at center, hsl(230 85% 65% / 0.3) 0%, transparent 70%);
 
-    /* Shadows for depth */
-    --shadow-sm: 0 2px 4px hsl(220 13% 18% / 0.04);
-    --shadow-md: 0 8px 16px hsl(220 13% 18% / 0.08);
-    --shadow-lg: 0 20px 40px hsl(220 13% 18% / 0.12);
-    --shadow-primary: 0 8px 32px hsl(210 100% 20% / 0.2);
+    /* Enhanced Shadows */
+    --shadow-sm: 0 2px 8px hsl(220 13% 18% / 0.06);
+    --shadow-md: 0 8px 25px hsl(220 13% 18% / 0.1);
+    --shadow-lg: 0 25px 50px hsl(220 13% 18% / 0.15);
+    --shadow-xl: 0 35px 70px hsl(220 13% 18% / 0.2);
+    --shadow-primary: 0 10px 40px hsl(230 85% 45% / 0.3);
+    --shadow-accent: 0 10px 40px hsl(180 100% 50% / 0.25);
+    --shadow-glow: 0 0 60px hsl(230 85% 65% / 0.4);
 
     /* Animation variables */
     --animation-fast: 0.2s;
@@ -131,17 +148,26 @@ All colors MUST be HSL for consistency.
 }
 
 @layer components {
-  /* Button Variants for GOwithWeb */
+  /* Enhanced Button Variants */
   .btn-hero {
-    @apply bg-gradient-to-r from-primary to-secondary text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-primary hover:scale-105 transition-all duration-300;
+    @apply bg-gradient-to-r from-primary via-secondary to-accent-bright text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg shadow-primary hover:shadow-glow hover:scale-105 hover:-translate-y-1 transition-all duration-500 relative overflow-hidden;
+  }
+  
+  .btn-hero::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-primary-glow to-secondary-glow opacity-0 hover:opacity-100 transition-opacity duration-500;
   }
 
   .btn-outline-hero {
-    @apply border-2 border-primary text-primary bg-transparent px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300;
+    @apply border-2 border-primary text-primary bg-transparent backdrop-blur-sm px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary hover:text-primary-foreground hover:shadow-primary hover:scale-105 transition-all duration-300 relative;
   }
 
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-medium hover:bg-secondary/90 transition-all duration-300;
+    @apply bg-gradient-to-r from-secondary to-secondary-glow text-secondary-foreground px-6 py-3 rounded-lg font-medium hover:shadow-accent hover:scale-105 transition-all duration-300;
+  }
+
+  .btn-accent {
+    @apply bg-gradient-to-r from-accent-bright to-primary text-white px-6 py-3 rounded-lg font-medium hover:shadow-accent hover:scale-105 transition-all duration-300;
   }
 
   /* Gradient backgrounds */
@@ -166,7 +192,7 @@ All colors MUST be HSL for consistency.
     box-shadow: var(--shadow-md);
   }
 
-  /* Animation classes */
+  /* Enhanced Animation Classes */
   .animate-fade-in {
     animation: fadeIn var(--animation-normal) ease-out;
   }
@@ -175,32 +201,79 @@ All colors MUST be HSL for consistency.
     animation: slideUp var(--animation-normal) ease-out;
   }
 
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
   .hover-lift {
-    @apply transition-transform duration-300 hover:-translate-y-2;
+    @apply transition-all duration-500 hover:-translate-y-3 hover:shadow-xl;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-glow;
+  }
+
+  .parallax-bg {
+    @apply bg-fixed bg-center bg-cover;
   }
 }
 
 @layer utilities {
-  /* Custom keyframes */
+  /* Enhanced Keyframes */
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px) scale(0.95);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
     }
   }
 
   @keyframes slideUp {
     from {
       opacity: 0;
-      transform: translateY(40px);
+      transform: translateY(50px);
     }
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 20px hsl(230 85% 65% / 0.5);
+    }
+    to {
+      box-shadow: 0 0 40px hsl(230 85% 65% / 0.8), 0 0 60px hsl(180 100% 50% / 0.4);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
     }
   }
 
