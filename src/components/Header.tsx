@@ -19,20 +19,62 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#domains" className="text-foreground hover:text-primary transition-colors">Domains</a>
-            <a href="#services" className="text-foreground hover:text-primary transition-colors">Hosting</a>
-            <a href="#web-development" className="text-foreground hover:text-primary transition-colors">Development</a>
-            <a href="#features" className="text-foreground hover:text-primary transition-colors">Features</a>
-            <a href="#testimonials" className="text-foreground hover:text-primary transition-colors">Reviews</a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
+            <a 
+              href="#domains" 
+              className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+            >
+              Domains
+            </a>
+            <a 
+              href="#services" 
+              className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+            >
+              Hosting
+            </a>
+            <a 
+              href="#web-development" 
+              className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+            >
+              Development
+            </a>
+            <a 
+              href="#features" 
+              className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+            >
+              Features
+            </a>
+            <a 
+              href="#testimonials" 
+              className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+            >
+              Reviews
+            </a>
+            <a 
+              href="#contact" 
+              className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+            >
+              Contact
+            </a>
           </nav>
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              Login
+            <Button 
+              variant="outline" 
+              onClick={() => window.open('https://client.gowithweb.com', '_blank')}
+              className="group"
+            >
+              <Shield className="w-4 h-4 mr-2 group-hover:animate-pulse" />
+              Client Login
             </Button>
-            <Button className="btn-hero">Get Started Free</Button>
+            <Button 
+              variant="hero"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="group"
+            >
+              <Zap className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+              Get Started Free
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}

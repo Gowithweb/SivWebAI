@@ -53,14 +53,29 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button className="btn-hero text-lg px-8 py-4 group">
-              Get Started Free
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            <Button 
+              variant="hero"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="text-lg px-8 py-4 group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-glow to-secondary-glow opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <span className="relative z-10 flex items-center">
+                Get Started Free
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </span>
             </Button>
-            <Button className="btn-outline-hero text-lg px-8 py-4">
+            <Button 
+              variant="outline"
+              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+              className="text-lg px-8 py-4 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white hover:text-foreground hover:border-white"
+            >
               Transfer Your Hosting
             </Button>
-            <Button variant="secondary" className="bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 text-lg px-8 py-4">
+            <Button 
+              variant="secondary" 
+              onClick={() => document.getElementById('domains')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 text-lg px-8 py-4"
+            >
               Explore Plans
             </Button>
           </div>

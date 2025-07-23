@@ -150,24 +150,38 @@ All colors MUST be HSL for consistency.
 @layer components {
   /* Enhanced Button Variants */
   .btn-hero {
-    @apply bg-gradient-to-r from-primary via-secondary to-accent-bright text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg shadow-primary hover:shadow-glow hover:scale-105 hover:-translate-y-1 transition-all duration-500 relative overflow-hidden;
+    @apply bg-gradient-to-r from-primary via-secondary to-accent-bright text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-primary hover:shadow-glow hover:scale-105 hover:-translate-y-1 transition-all duration-500 relative overflow-hidden;
   }
   
   .btn-hero::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-r from-primary-glow to-secondary-glow opacity-0 hover:opacity-100 transition-opacity duration-500;
+    @apply absolute inset-0 bg-gradient-to-r from-primary-glow to-secondary-glow opacity-0 hover:opacity-100 transition-opacity duration-500 z-0;
   }
 
   .btn-outline-hero {
-    @apply border-2 border-primary text-primary bg-transparent backdrop-blur-sm px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary hover:text-primary-foreground hover:shadow-primary hover:scale-105 transition-all duration-300 relative;
+    @apply border-2 border-primary/30 text-primary bg-transparent backdrop-blur-sm px-8 py-4 rounded-xl font-semibold text-lg hover:border-primary hover:bg-primary hover:text-primary-foreground hover:shadow-primary hover:scale-105 transition-all duration-300 relative;
   }
 
   .btn-secondary {
-    @apply bg-gradient-to-r from-secondary to-secondary-glow text-secondary-foreground px-6 py-3 rounded-lg font-medium hover:shadow-accent hover:scale-105 transition-all duration-300;
+    @apply bg-gradient-to-r from-secondary to-secondary-glow text-secondary-foreground px-6 py-3 rounded-lg font-medium hover:shadow-accent hover:scale-105 transition-all duration-300 relative overflow-hidden;
   }
 
   .btn-accent {
-    @apply bg-gradient-to-r from-accent-bright to-primary text-white px-6 py-3 rounded-lg font-medium hover:shadow-accent hover:scale-105 transition-all duration-300;
+    @apply bg-gradient-to-r from-accent-bright to-primary text-white px-6 py-3 rounded-lg font-medium hover:shadow-accent hover:scale-105 transition-all duration-300 relative overflow-hidden;
+  }
+
+  .btn-premium {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent-bright text-white px-8 py-4 rounded-xl font-semibold shadow-primary hover:shadow-glow hover:scale-105 hover:-translate-y-1 transition-all duration-500 relative overflow-hidden;
+  }
+
+  .btn-premium::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-white/10 to-white/20 opacity-0 hover:opacity-100 transition-opacity duration-500;
+  }
+
+  /* Interactive Link Styles */
+  .nav-link {
+    @apply relative font-medium transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
   }
 
   /* Gradient backgrounds */
@@ -222,7 +236,19 @@ All colors MUST be HSL for consistency.
   }
 
   .hover-glow {
-    @apply transition-all duration-300 hover:shadow-glow;
+    @apply transition-all duration-300 hover:shadow-glow hover:scale-[1.02];
+  }
+
+  .interactive-card {
+    @apply transition-all duration-500 hover:-translate-y-3 hover:shadow-xl hover:scale-[1.02] cursor-pointer;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent-bright bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
   }
 
   .parallax-bg {

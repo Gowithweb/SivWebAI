@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Search, Globe, Shield, Zap, CheckCircle, Star } from 'lucide-react';
+import { Search, Globe, Shield, Zap, CheckCircle, Star, ArrowRight, Gift } from 'lucide-react';
 
 const DomainSection = () => {
   const [domain, setDomain] = useState('');
@@ -137,9 +137,25 @@ const DomainSection = () => {
                 <div className="text-2xl font-bold text-primary mb-4">{item.price}</div>
                 <div className="text-sm text-muted-foreground mb-4">per year</div>
                 <Button 
-                  className={`w-full ${item.popular || item.trending ? 'btn-hero' : 'btn-secondary'}`}
+                  variant={item.popular || item.trending ? 'hero' : 'secondary'}
+                  onClick={() => {
+                    // Smooth scroll to contact section
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                    // Pre-fill domain in contact form if needed
+                    setTimeout(() => {
+                      const messageField = document.querySelector('textarea[placeholder*="message"]') as HTMLTextAreaElement;
+                      if (messageField) {
+                        messageField.value = `I'm interested in registering a ${item.ext} domain.`;
+                        messageField.focus();
+                      }
+                    }, 500);
+                  }}
+                  className="w-full group relative overflow-hidden"
                 >
-                  Register Now
+                  <span className="relative z-10 flex items-center justify-center">
+                    Register Now
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </span>
                 </Button>
               </CardContent>
             </Card>
@@ -155,7 +171,11 @@ const DomainSection = () => {
               Get FREE domain with any annual hosting plan + Free website setup + Free SSL certificate
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button className="bg-white text-primary hover:bg-white/90 px-8 py-3 font-semibold">
+              <Button 
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-white text-primary hover:bg-white/90 hover:shadow-lg hover:scale-105 px-8 py-3 font-semibold transition-all duration-300 group"
+              >
+                <Gift className="w-5 h-5 mr-2 group-hover:animate-bounce" />
                 Claim Free Domain
               </Button>
               <span className="text-sm opacity-75">No hidden fees • Instant setup • 24/7 support</span>
