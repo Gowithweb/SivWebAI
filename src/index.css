@@ -192,6 +192,10 @@ All colors MUST be HSL for consistency.
     box-shadow: var(--shadow-md);
   }
 
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
   /* Enhanced Animation Classes */
   .animate-fade-in {
     animation: fadeIn var(--animation-normal) ease-out;
