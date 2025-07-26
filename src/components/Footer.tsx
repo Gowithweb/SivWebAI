@@ -39,8 +39,11 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-hero text-white">
-      <div className="container mx-auto px-4 py-16">
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent-bright/5 opacity-50"></div>
+      <div className="absolute inset-0" style={{backgroundImage: "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)", backgroundSize: "20px 20px"}}></div>
+      <div className="container mx-auto px-4 py-16 relative z-10">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Company Info */}

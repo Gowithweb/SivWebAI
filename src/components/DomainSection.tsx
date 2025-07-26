@@ -89,17 +89,17 @@ const DomainSection = () => {
 
               {/* Quick Features */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-                <div className="flex items-center space-x-3 p-4 bg-success/10 rounded-lg">
+                <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-success/10 to-success/5 rounded-lg border border-success/20">
                   <Shield className="w-5 h-5 text-success" />
-                  <span className="text-sm font-medium text-success-foreground">Free WHOIS Protection</span>
+                  <span className="text-sm font-medium text-foreground">Free WHOIS Protection</span>
                 </div>
-                <div className="flex items-center space-x-3 p-4 bg-primary/10 rounded-lg">
+                <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg border border-primary/20">
                   <Zap className="w-5 h-5 text-primary" />
-                  <span className="text-sm font-medium text-primary-foreground">Instant Activation</span>
+                  <span className="text-sm font-medium text-foreground">Instant Activation</span>
                 </div>
-                <div className="flex items-center space-x-3 p-4 bg-accent-bright/10 rounded-lg">
+                <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-accent-bright/10 to-accent-bright/5 rounded-lg border border-accent-bright/20">
                   <CheckCircle className="w-5 h-5 text-accent-bright" />
-                  <span className="text-sm font-medium text-accent-bright-foreground">Free DNS Management</span>
+                  <span className="text-sm font-medium text-foreground">Free DNS Management</span>
                 </div>
               </div>
             </CardContent>
@@ -117,16 +117,16 @@ const DomainSection = () => {
             >
               {item.popular && (
                 <div className="absolute -top-2 -right-2">
-                  <div className="bg-gradient-to-r from-primary to-secondary text-white px-3 py-1 rounded-full text-xs font-medium flex items-center">
-                    <Star className="w-3 h-3 mr-1" />
-                    Popular
+                  <div className="bg-gradient-to-r from-primary via-primary-glow to-secondary text-white px-3 py-1 rounded-full text-xs font-medium flex items-center shadow-lg">
+                    <Star className="w-3 h-3 mr-1 fill-current" />
+                    Most Popular
                   </div>
                 </div>
               )}
               {item.trending && (
                 <div className="absolute -top-2 -right-2">
-                  <div className="bg-gradient-to-r from-accent-bright to-primary text-white px-3 py-1 rounded-full text-xs font-medium flex items-center">
-                    <Zap className="w-3 h-3 mr-1" />
+                  <div className="bg-gradient-to-r from-accent-bright via-secondary to-primary text-white px-3 py-1 rounded-full text-xs font-medium flex items-center shadow-lg">
+                    <Zap className="w-3 h-3 mr-1 fill-current" />
                     Trending
                   </div>
                 </div>
@@ -173,7 +173,8 @@ const DomainSection = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-white text-primary hover:bg-white/90 hover:shadow-lg hover:scale-105 px-8 py-3 font-semibold transition-all duration-300 group"
+                className="bg-white text-primary hover:bg-white/95 hover:shadow-xl hover:scale-105 px-8 py-3 font-semibold transition-all duration-300 group border-2 border-white/20"
+                size="lg"
               >
                 <Gift className="w-5 h-5 mr-2 group-hover:animate-bounce" />
                 Claim Free Domain
