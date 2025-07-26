@@ -10,8 +10,10 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-black/50"></div>
         <img 
           src={heroBanner} 
-          alt="Professional web hosting infrastructure"
+          alt="Best Web Hosting India - Premium SSD Servers with 24/7 Support and Free Domain"
           className="w-full h-full object-cover mix-blend-overlay opacity-30"
+          loading="eager"
+          fetchPriority="high"
         />
       </div>
 
@@ -24,15 +26,16 @@ const HeroSection = () => {
             <span className="text-white font-medium">3 Months Free Hosting + Free Domain + Free SSL</span>
           </div>
 
-          {/* Main Headline */}
+          {/* Main Headline with SEO Keywords */}
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 text-balance">
-            Premium Web Hosting 
+            Best Web Hosting 
             <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"> India</span>
+            <span className="block text-3xl md:text-4xl mt-2">Free Domain + SSL Certificate</span>
           </h1>
 
-          {/* Subheadline with SEO keywords */}
+          {/* Subheadline with Local SEO and Value Proposition */}
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto text-balance">
-            Best WordPress hosting with unlimited bandwidth, free website migration, 24/7 monitoring, and enterprise-grade security. Buy domain with hosting starting from ₹99/month.
+            Premium WordPress hosting starting <strong className="text-yellow-400">₹99/month</strong> with FREE domain registration, SSL certificate, unlimited bandwidth, and 24/7 expert support. Best hosting provider in Mumbai, Delhi, Bangalore for fastest website performance.
           </p>
 
           {/* Key Features */}

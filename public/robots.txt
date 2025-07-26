@@ -1,14 +1,45 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://gowithweb.com/sitemap.xml
+
+# Crawl-delay for search engines
+Crawl-delay: 1
+
+# Disallow admin/private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+
+# Allow important pages for SEO
+Allow: /
+Allow: /web-hosting
+Allow: /wordpress-hosting
+Allow: /vps-hosting
+Allow: /dedicated-servers
+Allow: /domain-registration
+Allow: /web-development
+Allow: /contact
+Allow: /about
+Allow: /pricing
+Allow: /support
+
+# Additional sitemaps
+Sitemap: https://gowithweb.com/sitemap-services.xml
+Sitemap: https://gowithweb.com/sitemap-locations.xml
+
+# Special directives for major search engines
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
-Allow: /
-
-User-agent: *
 Allow: /
