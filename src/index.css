@@ -19,19 +19,19 @@ All colors MUST be HSL for consistency.
     --popover-foreground: 220 15% 15%;
 
     /* Primary - Electric Blue */
-    --primary: 220 90% 56%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 220 90% 70%;
-    --primary-dark: 220 90% 45%;
+    --primary-glow: 217 91% 75%;
+    --primary-dark: 217 91% 45%;
 
-    /* Secondary - Vibrant Purple */
-    --secondary: 280 90% 60%;
+    /* Secondary - Deep Orange */
+    --secondary: 25 95% 53%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-glow: 280 90% 75%;
+    --secondary-glow: 25 95% 68%;
 
-    /* Accent - Neon Cyan */
-    --accent-bright: 180 100% 55%;
-    --accent-bright-foreground: 220 15% 15%;
+    /* Accent - Emerald Green */
+    --accent-bright: 158 64% 52%;
+    --accent-bright-foreground: 0 0% 100%;
 
     /* Success - Emerald Green */
     --success: 150 85% 45%;
@@ -60,14 +60,14 @@ All colors MUST be HSL for consistency.
     --radius: 0.75rem;
 
     /* Premium Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(220 90% 56%) 0%, hsl(280 90% 60%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(220 90% 45%) 0%, hsl(280 90% 55%) 30%, hsl(180 100% 55%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(25 95% 53%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(25 95% 53%) 50%, hsl(158 64% 52%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 20% 98%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(180 100% 55%) 0%, hsl(220 90% 70%) 100%);
-    --gradient-success: linear-gradient(135deg, hsl(150 85% 45%) 0%, hsl(150 85% 65%) 100%);
-    --gradient-glow: radial-gradient(circle at center, hsl(220 90% 70% / 0.4) 0%, transparent 70%);
-    --gradient-rainbow: linear-gradient(135deg, hsl(220 90% 56%) 0%, hsl(280 90% 60%) 25%, hsl(180 100% 55%) 50%, hsl(150 85% 45%) 75%, hsl(30 100% 55%) 100%);
-    --gradient-sunset: linear-gradient(135deg, hsl(280 90% 60%) 0%, hsl(30 100% 55%) 50%, hsl(220 90% 56%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(158 64% 52%) 0%, hsl(217 91% 60%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(158 64% 52%) 0%, hsl(158 64% 65%) 100%);
+    --gradient-glow: radial-gradient(circle at center, hsl(217 91% 75% / 0.4) 0%, transparent 70%);
+    --gradient-rainbow: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(25 95% 53%) 25%, hsl(158 64% 52%) 50%, hsl(280 90% 60%) 75%, hsl(45 93% 47%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(25 95% 53%) 0%, hsl(45 93% 47%) 50%, hsl(217 91% 60%) 100%);
 
     /* Premium Shadows */
     --shadow-sm: 0 2px 12px hsl(220 15% 15% / 0.08);

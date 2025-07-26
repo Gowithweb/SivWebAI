@@ -1,5 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Star, Quote } from 'lucide-react';
+import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { Button } from '@/components/ui/button';
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -50,6 +52,38 @@ const TestimonialsSection = () => {
       rating: 5,
       content: "Best cloud hosting for developers! The Kubernetes hosting and dedicated Linux servers handle our enterprise applications perfectly. Excellent uptime and support.",
       avatar: "AR"
+    },
+    {
+      name: "Kavya Nair",
+      role: "Marketing Manager",
+      company: "Digital Solutions Inc.",
+      rating: 5,
+      content: "GOwithWeb's managed WordPress hosting transformed our website performance. The automated backups and security features give us complete peace of mind.",
+      avatar: "KN"
+    },
+    {
+      name: "Suresh Kumar",
+      role: "IT Consultant",
+      company: "TechAdvise Solutions",
+      rating: 5,
+      content: "Impressed with their dedicated server performance and 24/7 technical support. Migration from our previous provider was seamless and hassle-free.",
+      avatar: "SK"
+    },
+    {
+      name: "Deepa Sharma",
+      role: "Online Business Owner",
+      company: "HomeDecor Plus",
+      rating: 5,
+      content: "The shared hosting plan with unlimited bandwidth is perfect for our growing business. Customer support team is incredibly responsive and knowledgeable.",
+      avatar: "DS"
+    },
+    {
+      name: "Ramesh Gupta",
+      role: "Freelance Developer",
+      company: "WebCraft Studios",
+      rating: 5,
+      content: "Their developer-friendly hosting with Git integration and staging environments makes deployment effortless. Great value for money!",
+      avatar: "RG"
     }
   ];
 
@@ -65,40 +99,57 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="hover-lift shadow-custom bg-gradient-card border-0 relative overflow-hidden">
-              {/* Quote Icon */}
-              <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/20" />
-              
-              <CardContent className="p-6">
-                {/* Rating */}
-                <div className="flex items-center space-x-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex space-x-2">
+              <CarouselPrevious className="static translate-y-0 bg-gradient-primary text-white hover:bg-gradient-to-r hover:from-primary hover:to-secondary border-0" />
+              <CarouselNext className="static translate-y-0 bg-gradient-primary text-white hover:bg-gradient-to-r hover:from-primary hover:to-secondary border-0" />
+            </div>
+          </div>
+          
+          <CarouselContent>
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <Card className="hover-lift shadow-custom bg-gradient-card border-0 relative overflow-hidden h-full">
+                  {/* Quote Icon */}
+                  <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/20" />
+                  
+                  <CardContent className="p-6 flex flex-col h-full">
+                    {/* Rating */}
+                    <div className="flex items-center space-x-1 mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-secondary text-secondary" />
+                      ))}
+                    </div>
 
-                {/* Content */}
-                <p className="text-foreground mb-6 leading-relaxed">
-                  "{testimonial.content}"
-                </p>
+                    {/* Content */}
+                    <p className="text-foreground mb-6 leading-relaxed flex-grow">
+                      "{testimonial.content}"
+                    </p>
 
-                {/* Author */}
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-semibold">
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <div className="font-semibold text-foreground">{testimonial.name}</div>
-                    <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                    <div className="text-sm text-primary font-medium">{testimonial.company}</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+                    {/* Author */}
+                    <div className="flex items-center space-x-4 mt-auto">
+                      <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-semibold">
+                        {testimonial.avatar}
+                      </div>
+                      <div>
+                        <div className="font-semibold text-foreground">{testimonial.name}</div>
+                        <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                        <div className="text-sm text-secondary font-medium">{testimonial.company}</div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
 
         {/* Trust Indicators */}
         <div className="mt-16 text-center">

@@ -101,10 +101,14 @@ const WebDevelopmentSection = () => {
   ];
 
   const portfolioItems = [
-    { name: "E-commerce Store", tech: "React + Node.js", image: "🛒" },
-    { name: "Corporate Website", tech: "WordPress", image: "🏢" },
-    { name: "SaaS Dashboard", tech: "Next.js", image: "📊" },
-    { name: "Mobile App", tech: "React Native", image: "📱" }
+    { name: "E-commerce Store", tech: "React + Node.js", image: "🛒", desc: "Modern shopping platform" },
+    { name: "Corporate Website", tech: "WordPress", image: "🏢", desc: "Professional business site" },
+    { name: "SaaS Dashboard", tech: "Next.js", image: "📊", desc: "Analytics and reporting" },
+    { name: "Mobile App", tech: "React Native", image: "📱", desc: "Cross-platform mobile app" },
+    { name: "Restaurant Website", tech: "WordPress", image: "🍽️", desc: "Online ordering system" },
+    { name: "Healthcare Portal", tech: "React + TypeScript", image: "🏥", desc: "Patient management system" },
+    { name: "Real Estate Platform", tech: "Next.js + Prisma", image: "🏠", desc: "Property listing website" },
+    { name: "Learning Management", tech: "Vue.js + Laravel", image: "📚", desc: "Online education platform" }
   ];
 
   return (
@@ -143,8 +147,8 @@ const WebDevelopmentSection = () => {
             >
               {service.popular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-                  <Badge className="bg-gradient-primary text-white px-4 py-1 rounded-full flex items-center">
-                    <Star className="w-3 h-3 mr-1" />
+                  <Badge className="bg-gradient-to-r from-secondary to-secondary-glow text-white px-4 py-1 rounded-full flex items-center shadow-lg border-0 animate-pulse-slow">
+                    <Star className="w-3 h-3 mr-1 fill-current" />
                     Most Popular
                   </Badge>
                 </div>
@@ -208,10 +212,11 @@ const WebDevelopmentSection = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {portfolioItems.map((item, index) => (
-              <div key={index} className="text-center p-6 rounded-xl bg-background/50 hover-lift">
-                <div className="text-6xl mb-4">{item.image}</div>
+              <div key={index} className="text-center p-6 rounded-xl bg-background/50 hover-lift group cursor-pointer border border-border/50 hover:border-primary/30 transition-all">
+                <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">{item.image}</div>
                 <h4 className="font-semibold text-foreground mb-2">{item.name}</h4>
-                <Badge variant="outline" className="text-xs">{item.tech}</Badge>
+                <p className="text-sm text-muted-foreground mb-3">{item.desc}</p>
+                <Badge variant="outline" className="text-xs bg-gradient-primary text-white border-0">{item.tech}</Badge>
               </div>
             ))}
           </div>
