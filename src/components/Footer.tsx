@@ -39,10 +39,16 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent-bright/5 opacity-50"></div>
-      <div className="absolute inset-0" style={{backgroundImage: "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)", backgroundSize: "20px 20px"}}></div>
+    <footer className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white relative overflow-hidden">
+      {/* Background Patterns */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-primary to-primary-glow rounded-full blur-xl animate-pulse-slow"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-r from-accent-bright to-secondary rounded-full blur-xl animate-float"></div>
+        <div className="absolute top-40 right-40 w-24 h-24 bg-gradient-to-r from-secondary to-accent-bright rounded-full blur-xl animate-pulse-slow delay-1000"></div>
+        <div className="absolute bottom-40 left-40 w-28 h-28 bg-gradient-to-r from-primary-glow to-primary rounded-full blur-xl animate-float delay-500"></div>
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-secondary/3 to-accent-bright/3 opacity-60"></div>
+      <div className="absolute inset-0" style={{backgroundImage: "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0)", backgroundSize: "24px 24px"}}></div>
       <div className="container mx-auto px-4 py-16 relative z-10">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">

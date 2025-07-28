@@ -172,8 +172,17 @@ const DomainSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-white text-primary hover:bg-white/95 hover:shadow-xl hover:scale-105 px-8 py-3 font-semibold transition-all duration-300 group border-2 border-white/20"
+                onClick={() => {
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  setTimeout(() => {
+                    const messageField = document.querySelector('textarea[name="message"]') as HTMLTextAreaElement;
+                    if (messageField) {
+                      messageField.value = 'I want to claim my free domain with hosting plan. Please contact me with details.';
+                      messageField.focus();
+                    }
+                  }, 800);
+                }}
+                className="bg-white text-primary hover:bg-white/95 hover:shadow-xl hover:scale-105 px-8 py-3 font-semibold transition-all duration-300 group border-2 border-white/20 shadow-lg"
                 size="lg"
               >
                 <Gift className="w-5 h-5 mr-2 group-hover:animate-bounce" />

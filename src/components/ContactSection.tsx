@@ -223,8 +223,12 @@ const ContactSection = () => {
                 <p className="mb-6 text-white/90">
                   Our technical experts are available 24/7 to assist with hosting questions, migrations, and technical support.
                 </p>
-                <Button variant="secondary" className="bg-white text-primary hover:bg-white/90">
-                  <Phone className="w-5 h-5 mr-2" />
+                <Button 
+                  onClick={() => window.open('tel:+919876543210', '_self')}
+                  className="bg-white text-primary hover:bg-white/95 hover:shadow-xl hover:scale-105 font-semibold transition-all duration-300 group border-2 border-white/20"
+                  size="lg"
+                >
+                  <Phone className="w-5 h-5 mr-2 group-hover:animate-bounce" />
                   Call Now: +91 9876543210
                 </Button>
               </CardContent>
