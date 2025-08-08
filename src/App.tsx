@@ -3,24 +3,40 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from 'react-helmet-async';
 import Index from "./pages/Index";
+import WebSolutions from "./pages/WebSolutions";
+import WebDevelopment from "./pages/WebDevelopment";
+import Contact from "./pages/Contact";
+import ToolsServices from "./pages/ToolsServices";
+import SSL from "./pages/SSL";
+import SEO from "./pages/SEO";
+import DigitalMarketing from "./pages/DigitalMarketing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
+    <HelmetProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/web-solutions" element={<WebSolutions />} />
+            <Route path="/web-development" element={<WebDevelopment />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/tools-services" element={<ToolsServices />} />
+            <Route path="/ssl-security" element={<SSL />} />
+            <Route path="/seo-services" element={<SEO />} />
+            <Route path="/digital-marketing" element={<DigitalMarketing />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </HelmetProvider>
   </QueryClientProvider>
 );
 
