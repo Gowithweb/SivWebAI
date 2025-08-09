@@ -93,7 +93,7 @@ const SEO = () => {
                       <Search className="w-5 h-5 mr-2" />
                       Get Free SEO Audit
                     </Button>
-                    <Button size="lg" variant="outline-hero">
+                    <Button size="lg" variant="outline">
                       View Case Studies
                     </Button>
                   </div>

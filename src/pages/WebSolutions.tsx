@@ -60,7 +60,7 @@ const WebSolutions = () => {
                 <Zap className="w-5 h-5 mr-2" />
                 Start Your Project
               </Button>
-              <Button size="lg" variant="outline-hero">
+              <Button size="lg" variant="outline">
                 View Our Portfolio
               </Button>
             </div>
