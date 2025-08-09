@@ -60,10 +60,14 @@ const DigitalMarketing = () => {
   return (
     <>
       <Helmet>
-        <title>Digital Marketing Services - Grow Your Business Online | GOwithWeb</title>
-        <meta name="description" content="Comprehensive digital marketing services including PPC advertising, social media marketing, email marketing, and content marketing. Drive more traffic and conversions." />
-        <meta name="keywords" content="digital marketing, PPC advertising, social media marketing, email marketing, content marketing, Google Ads, Facebook Ads" />
+        <title>Digital Marketing Services - 400% Average ROI | GOwithWeb</title>
+        <meta name="description" content="Results-driven digital marketing services that scale your business. 400% average ROI across social media, PPC, content marketing, and email campaigns. Data-driven strategies with real-time optimization and comprehensive analytics reporting." />
+        <meta name="keywords" content="digital marketing agency, social media marketing, PPC advertising, content marketing, email marketing, marketing automation, conversion optimization, digital strategy, online advertising, marketing analytics" />
         <link rel="canonical" href="https://gowithweb.com/digital-marketing" />
+        <meta property="og:title" content="Digital Marketing Services - 400% Average ROI | GOwithWeb" />
+        <meta property="og:description" content="Scale your business with data-driven digital marketing strategies. Proven results across all digital channels." />
+        <meta property="og:type" content="service" />
+        <meta property="og:url" content="https://gowithweb.com/digital-marketing" />
       </Helmet>
 
       <div className="min-h-screen">

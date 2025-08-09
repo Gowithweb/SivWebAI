@@ -20,37 +20,37 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a 
-              href="#domains" 
+              href="/" 
               className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
             >
-              Domains
+              Home
             </a>
             <a 
-              href="#services" 
+              href="/web-solutions" 
               className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
             >
-              Hosting
+              Web Solutions
             </a>
             <a 
-              href="#web-development" 
+              href="/web-development" 
               className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
             >
               Development
             </a>
             <a 
-              href="#features" 
+              href="/seo-services" 
               className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
             >
-              Features
+              SEO Services
             </a>
             <a 
-              href="#testimonials" 
+              href="/digital-marketing" 
               className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
             >
-              Reviews
+              Marketing
             </a>
             <a 
-              href="#contact" 
+              href="/contact" 
               className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
             >
               Contact
@@ -90,12 +90,12 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md">
             <nav className="flex flex-col space-y-4">
-              <a href="#domains" className="text-foreground hover:text-primary transition-colors">Domains</a>
-              <a href="#services" className="text-foreground hover:text-primary transition-colors">Hosting</a>
-              <a href="#web-development" className="text-foreground hover:text-primary transition-colors">Development</a>
-              <a href="#features" className="text-foreground hover:text-primary transition-colors">Features</a>
-              <a href="#testimonials" className="text-foreground hover:text-primary transition-colors">Reviews</a>
-              <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
+              <a href="/" className="text-foreground hover:text-primary transition-colors">Home</a>
+              <a href="/web-solutions" className="text-foreground hover:text-primary transition-colors">Web Solutions</a>
+              <a href="/web-development" className="text-foreground hover:text-primary transition-colors">Development</a>
+              <a href="/seo-services" className="text-foreground hover:text-primary transition-colors">SEO Services</a>
+              <a href="/digital-marketing" className="text-foreground hover:text-primary transition-colors">Marketing</a>
+              <a href="/contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
               <div className="flex flex-col space-y-2 pt-4 border-t border-border">
                 <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                   Login

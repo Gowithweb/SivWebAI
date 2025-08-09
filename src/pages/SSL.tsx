@@ -80,10 +80,14 @@ const SSL = () => {
   return (
     <>
       <Helmet>
-        <title>SSL Certificates - Secure Your Website with HTTPS | GOwithWeb</title>
-        <meta name="description" content="Get SSL certificates to secure your website with HTTPS encryption. Free and premium SSL options available. Boost SEO rankings and customer trust." />
-        <meta name="keywords" content="SSL certificate, HTTPS, website security, encryption, domain validation, business SSL, extended validation" />
+        <title>Enterprise SSL Certificates & Website Security | GOwithWeb</title>
+        <meta name="description" content="Enterprise-grade SSL certificates and comprehensive website security solutions. Free SSL installation, 24/7 security monitoring, malware protection, and vulnerability assessments. Protect your business with military-grade encryption." />
+        <meta name="keywords" content="SSL certificates, website security, HTTPS, SSL installation, security monitoring, website protection, secure hosting, malware protection, vulnerability assessment, enterprise security" />
         <link rel="canonical" href="https://gowithweb.com/ssl-security" />
+        <meta property="og:title" content="Enterprise SSL Certificates & Website Security | GOwithWeb" />
+        <meta property="og:description" content="Comprehensive website security solutions with free SSL installation and 24/7 monitoring." />
+        <meta property="og:type" content="service" />
+        <meta property="og:url" content="https://gowithweb.com/ssl-security" />
       </Helmet>
 
       <div className="min-h-screen">

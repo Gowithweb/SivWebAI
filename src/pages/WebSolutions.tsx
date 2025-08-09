@@ -37,9 +37,48 @@ const WebSolutions = () => {
     <>
       <Helmet>
         <title>Web Solutions - Custom Development & Cloud Services | GOwithWeb</title>
-        <meta name="description" content="Professional web solutions including custom applications, database management, cloud infrastructure, and API development. Scalable solutions for modern businesses." />
-        <meta name="keywords" content="web solutions, custom web applications, database solutions, cloud infrastructure, API development, React development" />
+        <meta name="description" content="Complete web solutions including premium hosting, domain registration, SSL certificates, website management, and enterprise-grade security. Professional web services designed for modern businesses and startups." />
+        <meta name="keywords" content="web solutions, premium web hosting, domain registration, SSL certificates, website management, business websites, enterprise hosting, cloud hosting, website security" />
         <link rel="canonical" href="https://gowithweb.com/web-solutions" />
+        <meta property="og:title" content="Complete Web Solutions - Hosting, Domains & Security | GOwithWeb" />
+        <meta property="og:description" content="Premium web hosting, domain registration, SSL certificates, and comprehensive website management solutions for businesses." />
+        <meta property="og:type" content="service" />
+        <meta property="og:url" content="https://gowithweb.com/web-solutions" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Web Solutions",
+            "provider": {
+              "@type": "Organization",
+              "name": "GOwithWeb"
+            },
+            "description": "Complete web solutions including hosting, domains, SSL certificates, and website management",
+            "serviceType": "Web Services",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Web Solutions Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Web Hosting",
+                    "description": "Premium web hosting with 99.9% uptime guarantee"
+                  }
+                },
+                {
+                  "@type": "Offer", 
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Domain Registration",
+                    "description": "Domain name registration and management services"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
       </Helmet>
 
       <div className="min-h-screen">

@@ -47,10 +47,14 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - Get in Touch for Web Services | GOwithWeb</title>
-        <meta name="description" content="Contact GOwithWeb for web hosting, development, and digital services. 24/7 support available. Call +91 9876543210 or email support@gowithweb.com" />
-        <meta name="keywords" content="contact, support, web hosting support, web development contact, customer service, 24/7 support" />
+        <title>Contact Us - Free Consultation & 24/7 Support | GOwithWeb</title>
+        <meta name="description" content="Contact GOwithWeb for expert web services consultation. Free strategy sessions, 24/7 support, custom quotes, and dedicated project management. Start your digital transformation today with our award-winning team." />
+        <meta name="keywords" content="contact GOwithWeb, web services consultation, free quote, web development support, hosting support, 24/7 support, digital strategy, project consultation" />
         <link rel="canonical" href="https://gowithweb.com/contact" />
+        <meta property="og:title" content="Contact GOwithWeb - Free Consultation & Expert Support" />
+        <meta property="og:description" content="Get expert consultation for your web projects. Free strategy sessions and 24/7 support available." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://gowithweb.com/contact" />
       </Helmet>
 
       <div className="min-h-screen">

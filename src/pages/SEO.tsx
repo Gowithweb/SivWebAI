@@ -66,10 +66,14 @@ const SEO = () => {
   return (
     <>
       <Helmet>
-        <title>SEO Services - Boost Your Search Engine Rankings | GOwithWeb</title>
-        <meta name="description" content="Professional SEO services to improve your website's search engine rankings. Keyword research, on-page optimization, technical SEO, and local SEO services." />
-        <meta name="keywords" content="SEO services, search engine optimization, keyword research, on-page SEO, technical SEO, local SEO, Google rankings" />
+        <title>Advanced SEO Services - Increase Traffic by 300% | GOwithWeb</title>
+        <meta name="description" content="Advanced SEO services that deliver real results. Increase organic traffic by 300%+ with our comprehensive SEO strategy including technical optimization, content marketing, and local SEO. Proven track record with 500+ successful campaigns." />
+        <meta name="keywords" content="advanced SEO services, search engine optimization, SEO audit, keyword research, on-page SEO, off-page SEO, technical SEO, local SEO, content marketing, link building, SEO strategy" />
         <link rel="canonical" href="https://gowithweb.com/seo-services" />
+        <meta property="og:title" content="Advanced SEO Services - Increase Traffic by 300% | GOwithWeb" />
+        <meta property="og:description" content="Professional SEO services that deliver measurable results. Comprehensive SEO strategies for maximum organic growth." />
+        <meta property="og:type" content="service" />
+        <meta property="og:url" content="https://gowithweb.com/seo-services" />
       </Helmet>
 
       <div className="min-h-screen">
