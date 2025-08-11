@@ -19,42 +19,12 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a 
-              href="/" 
-              className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
-            >
-              Home
-            </a>
-            <a 
-              href="/web-solutions" 
-              className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
-            >
-              Web Solutions
-            </a>
-            <a 
-              href="/web-development" 
-              className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
-            >
-              Development
-            </a>
-            <a 
-              href="/seo-services" 
-              className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
-            >
-              SEO Services
-            </a>
-            <a 
-              href="/digital-marketing" 
-              className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
-            >
-              Marketing
-            </a>
-            <a 
-              href="/contact" 
-              className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
-            >
-              Contact
-            </a>
+            <a href="/" className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Home</a>
+            <a href="/services" className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Services</a>
+            <a href="/projects" className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Projects</a>
+            <a href="/blog" className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Blog</a>
+            <a href="/technical-support" className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Support</a>
+            <a href="/contact" className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Contact</a>
           </nav>
 
           {/* Desktop CTA Buttons */}
@@ -91,10 +61,10 @@ const Header = () => {
           <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md">
             <nav className="flex flex-col space-y-4">
               <a href="/" className="text-foreground hover:text-primary transition-colors">Home</a>
-              <a href="/web-solutions" className="text-foreground hover:text-primary transition-colors">Web Solutions</a>
-              <a href="/web-development" className="text-foreground hover:text-primary transition-colors">Development</a>
-              <a href="/seo-services" className="text-foreground hover:text-primary transition-colors">SEO Services</a>
-              <a href="/digital-marketing" className="text-foreground hover:text-primary transition-colors">Marketing</a>
+              <a href="/services" className="text-foreground hover:text-primary transition-colors">Services</a>
+              <a href="/projects" className="text-foreground hover:text-primary transition-colors">Projects</a>
+              <a href="/blog" className="text-foreground hover:text-primary transition-colors">Blog</a>
+              <a href="/technical-support" className="text-foreground hover:text-primary transition-colors">Support</a>
               <a href="/contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
               <div className="flex flex-col space-y-2 pt-4 border-t border-border">
                 <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
