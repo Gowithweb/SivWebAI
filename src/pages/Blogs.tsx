@@ -32,7 +32,7 @@ const Blogs = () => {
     views: "2.4k",
     comments: 23,
     category: "Web Development",
-    image: "/api/placeholder/800/400",
+    image: "/src/assets/featured-post.jpg",
     featured: true
   };
 
@@ -47,7 +47,7 @@ const Blogs = () => {
       views: "1.8k",
       comments: 15,
       category: "SEO",
-      image: "/api/placeholder/400/250",
+      image: "/src/assets/seo-post.jpg",
       tags: ["SEO", "Marketing", "Google"]
     },
     {
@@ -86,7 +86,7 @@ const Blogs = () => {
       views: "2.1k",
       comments: 31,
       category: "Development",
-      image: "/api/placeholder/400/250",
+      image: "/src/assets/react-vue-post.jpg",
       tags: ["React", "Vue", "JavaScript"]
     },
     {
@@ -180,8 +180,15 @@ const Blogs = () => {
         
         <main className="pt-20">
           {/* Hero Section */}
-          <section className="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
-            <div className="container mx-auto px-4 text-center">
+          <section className="relative py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 overflow-hidden">
+            <div className="absolute inset-0 opacity-10">
+              <img 
+                src="/src/assets/blog-hero.jpg" 
+                alt="Tech Blog Background" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="relative container mx-auto px-4 text-center">
               <div className="max-w-4xl mx-auto">
                 <Badge className="mb-6 bg-gradient-primary text-white border-0">
                   <TrendingUp className="w-4 h-4 mr-2" />
