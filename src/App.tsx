@@ -16,6 +16,9 @@ import ToolsServices from "./pages/ToolsServices";
 import SSL from "./pages/SSL";
 import SEO from "./pages/SEO";
 import DigitalMarketing from "./pages/DigitalMarketing";
+import AIServices from "./pages/AIServices";
+import Team from "./pages/Team";
+import Tools from "./pages/Tools";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,6 +43,9 @@ const App = () => (
             <Route path="/ssl-security" element={<SSL />} />
             <Route path="/seo-services" element={<SEO />} />
             <Route path="/digital-marketing" element={<DigitalMarketing />} />
+            <Route path="/ai-services" element={<AIServices />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/tools" element={<Tools />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
