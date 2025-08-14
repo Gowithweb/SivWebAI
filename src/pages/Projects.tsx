@@ -19,6 +19,15 @@ import {
   GraduationCap,
   Utensils
 } from 'lucide-react';
+import techcorpImg from '@/assets/techcorp-platform.jpg';
+import ecoshopImg from '@/assets/ecoshop-platform.jpg';
+import medicareImg from '@/assets/medicare-portal.jpg';
+import foodieImg from '@/assets/foodie-app.jpg';
+import eduImg from '@/assets/edulearn-lms.jpg';
+import artistImg from '@/assets/artist-portfolio.jpg';
+import financeImg from '@/assets/finance-dashboard.jpg';
+import fitnessImg from '@/assets/fitness-app.jpg';
+import marketImg from '@/assets/local-market.jpg';
 
 const Projects = () => {
   const featuredProjects = [
@@ -27,7 +36,7 @@ const Projects = () => {
       title: "TechCorp Enterprise Platform",
       category: "Enterprise Software",
       description: "Complete enterprise management system with advanced analytics and reporting capabilities",
-      image: "/api/placeholder/600/400",
+      image: techcorpImg,
       technologies: ["React", "Node.js", "PostgreSQL", "AWS"],
       features: ["Real-time Analytics", "Role-based Access", "API Integration", "Mobile Responsive"],
       client: "TechCorp Inc.",
@@ -42,7 +51,7 @@ const Projects = () => {
       title: "EcoShop E-commerce Platform",
       category: "E-commerce",
       description: "Sustainable products marketplace with advanced filtering and recommendation engine",
-      image: "/api/placeholder/600/400",
+      image: ecoshopImg,
       technologies: ["Next.js", "Stripe", "MongoDB", "Vercel"],
       features: ["Payment Integration", "Inventory Management", "Order Tracking", "Admin Dashboard"],
       client: "EcoShop Ltd.",
@@ -57,7 +66,7 @@ const Projects = () => {
       title: "MediCare Health Portal",
       category: "Healthcare",
       description: "Patient management system with appointment scheduling and telemedicine features",
-      image: "/api/placeholder/600/400",
+      image: medicareImg,
       technologies: ["Vue.js", "Express", "MySQL", "Socket.io"],
       features: ["Appointment Booking", "Video Consultations", "Medical Records", "Prescription Management"],
       client: "MediCare Hospital",
@@ -114,42 +123,42 @@ const Projects = () => {
       category: "Restaurant",
       description: "Multi-restaurant food delivery platform with real-time tracking",
       technologies: ["React Native", "Firebase", "Node.js"],
-      image: "/api/placeholder/400/300"
+      image: foodieImg
     },
     {
       title: "EduLearn LMS",
       category: "Education",
       description: "Comprehensive learning management system for online education",
       technologies: ["Angular", "Spring Boot", "PostgreSQL"],
-      image: "/api/placeholder/400/300"
+      image: eduImg
     },
     {
       title: "ArtistPortfolio Pro",
       category: "Portfolio",
       description: "Dynamic portfolio website for creative professionals",
       technologies: ["Gatsby", "Contentful", "Netlify"],
-      image: "/api/placeholder/400/300"
+      image: artistImg
     },
     {
       title: "FinanceTracker Dashboard",
       category: "Corporate",
       description: "Advanced financial analytics and reporting dashboard",
       technologies: ["React", "D3.js", "Express", "MongoDB"],
-      image: "/api/placeholder/400/300"
+      image: financeImg
     },
     {
       title: "FitnessPro App",
       category: "Healthcare",
       description: "Personal fitness tracking and workout planning application",
       technologies: ["Flutter", "Firebase", "Machine Learning"],
-      image: "/api/placeholder/400/300"
+      image: fitnessImg
     },
     {
       title: "LocalMarket Platform",
       category: "E-commerce",
       description: "Local marketplace connecting buyers with nearby sellers",
       technologies: ["Next.js", "Supabase", "Stripe"],
-      image: "/api/placeholder/400/300"
+      image: marketImg
     }
   ];
 

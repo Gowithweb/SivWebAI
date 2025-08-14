@@ -18,19 +18,19 @@ All colors MUST be HSL for consistency.
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 15%;
 
-    /* Primary - Deep Ocean Blue */
-    --primary: 216 100% 50%;
+    /* Primary - Electric Blue */
+    --primary: 210 100% 56%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 216 100% 70%;
-    --primary-dark: 216 100% 35%;
+    --primary-glow: 210 100% 65%;
+    --primary-dark: 210 100% 45%;
 
-    /* Secondary - Royal Purple */
-    --secondary: 260 100% 55%;
+    /* Secondary - Coral Sunset */
+    --secondary: 14 100% 63%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-glow: 260 100% 75%;
+    --secondary-glow: 14 100% 70%;
 
-    /* Accent - Vibrant Cyan */
-    --accent-bright: 190 100% 42%;
+    /* Accent - Electric Purple */
+    --accent-bright: 280 100% 70%;
     --accent-bright-foreground: 0 0% 100%;
 
     /* Success - Emerald Green */
@@ -111,16 +111,16 @@ All colors MUST be HSL for consistency.
     --popover: 220 25% 10%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 217 91% 70%;
+    --primary: 210 100% 70%;
     --primary-foreground: 220 25% 8%;
-    --primary-glow: 217 91% 85%;
-    --primary-dark: 217 91% 55%;
+    --primary-glow: 210 100% 78%;
+    --primary-dark: 210 100% 60%;
 
-    --secondary: 271 91% 75%;
+    --secondary: 14 100% 70%;
     --secondary-foreground: 220 25% 8%;
-    --secondary-glow: 271 91% 90%;
+    --secondary-glow: 14 100% 78%;
 
-    --accent-bright: 173 80% 50%;
+    --accent-bright: 280 100% 80%;
     --accent-bright-foreground: 220 25% 8%;
 
     --success: 158 64% 60%;

@@ -22,6 +22,10 @@ import {
   ArrowRight,
   Star
 } from 'lucide-react';
+import securityServicesImg from '@/assets/security-services.jpg';
+import databaseServicesImg from '@/assets/database-services.jpg';
+import cloudServicesImg from '@/assets/cloud-services.jpg';
+import analyticsServicesImg from '@/assets/analytics-services.jpg';
 
 const Services = () => {
   const mainServices = [
@@ -79,22 +83,26 @@ const Services = () => {
     {
       icon: Shield,
       category: "Security",
-      services: ["SSL Certificates", "Security Audits", "Malware Protection", "Firewall Setup"]
+      services: ["SSL Certificates", "Security Audits", "Malware Protection", "Firewall Setup"],
+      image: securityServicesImg
     },
     {
       icon: Database,
       category: "Database Management",
-      services: ["Database Design", "Migration Services", "Performance Optimization", "Backup Solutions"]
+      services: ["Database Design", "Migration Services", "Performance Optimization", "Backup Solutions"],
+      image: databaseServicesImg
     },
     {
       icon: Cloud,
       category: "Cloud Services",
-      services: ["Cloud Migration", "AWS/Azure Setup", "Server Management", "CDN Configuration"]
+      services: ["Cloud Migration", "AWS/Azure Setup", "Server Management", "CDN Configuration"],
+      image: cloudServicesImg
     },
     {
       icon: BarChart3,
       category: "Analytics & Reporting",
-      services: ["Google Analytics", "Custom Dashboards", "Performance Reports", "Conversion Tracking"]
+      services: ["Google Analytics", "Custom Dashboards", "Performance Reports", "Conversion Tracking"],
+      image: analyticsServicesImg
     }
   ];
 
@@ -231,17 +239,30 @@ const Services = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {additionalServices.map((category, index) => (
-                  <Card key={index} className="text-center hover:shadow-lg transition-all duration-300">
-                    <CardHeader>
-                      <div className="w-16 h-16 bg-gradient-secondary rounded-full flex items-center justify-center mx-auto mb-4">
-                        <category.icon className="w-8 h-8 text-white" />
+                  <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                    <div className="relative h-48">
+                      <img 
+                        src={category.image} 
+                        alt={category.category}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                      <div className="absolute bottom-4 left-4">
+                        <div className="w-12 h-12 bg-gradient-secondary rounded-full flex items-center justify-center">
+                          <category.icon className="w-6 h-6 text-white" />
+                        </div>
                       </div>
+                    </div>
+                    <CardHeader>
                       <CardTitle className="text-lg">{category.category}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <ul className="space-y-2">
                         {category.services.map((service, idx) => (
-                          <li key={idx} className="text-sm text-muted-foreground">{service}</li>
+                          <li key={idx} className="text-sm text-muted-foreground flex items-center">
+                            <CheckCircle className="w-3 h-3 text-success mr-2" />
+                            {service}
+                          </li>
                         ))}
                       </ul>
                     </CardContent>
