@@ -24,13 +24,13 @@ import {
 const Blogs = () => {
   const featuredPost = {
     id: 1,
-    title: "The Future of Web Development: Trends to Watch in 2024",
-    excerpt: "Explore the latest trends shaping the web development landscape, from AI integration to progressive web apps and beyond.",
+    title: "The Complete Guide to Modern JavaScript Frameworks in 2024",
+    excerpt: "React, Vue, Angular, and Svelte have transformed web development. Learn which framework suits your next project best with real-world examples, performance comparisons, and industry adoption rates from Fortune 500 companies.",
     author: "Sarah Johnson",
-    date: "December 15, 2023",
-    readTime: "8 min read",
-    views: "2.4k",
-    comments: 23,
+    date: "January 15, 2024",
+    readTime: "12 min read",
+    views: "3.7k",
+    comments: 42,
     category: "Web Development",
     image: "/src/assets/featured-post.jpg",
     featured: true
@@ -39,81 +39,81 @@ const Blogs = () => {
   const blogPosts = [
     {
       id: 2,
-      title: "SEO Best Practices for 2024: A Complete Guide",
-      excerpt: "Master the latest SEO techniques to boost your website's visibility and drive organic traffic.",
+      title: "Google Core Web Vitals: What Changed in 2024 and How to Adapt",
+      excerpt: "Google's latest algorithm updates prioritize user experience metrics. Learn how to optimize LCP, FID, and CLS scores with actionable techniques that improved our clients' rankings by 150% on average.",
       author: "Mike Chen",
-      date: "December 12, 2023",
-      readTime: "6 min read",
-      views: "1.8k",
-      comments: 15,
+      date: "January 10, 2024",
+      readTime: "8 min read",
+      views: "2.3k",
+      comments: 28,
       category: "SEO",
       image: "/src/assets/seo-post.jpg",
-      tags: ["SEO", "Marketing", "Google"]
+      tags: ["SEO", "Core Web Vitals", "Google", "Performance"]
     },
     {
       id: 3,
-      title: "Building Responsive Websites: Mobile-First Approach",
-      excerpt: "Learn how to create websites that look great on all devices using mobile-first design principles.",
+      title: "CSS Grid vs Flexbox: When to Use Each in 2024",
+      excerpt: "Real-world examples of when CSS Grid outperforms Flexbox and vice versa. Includes performance benchmarks, browser compatibility data, and code examples from major websites like Netflix and Spotify.",
       author: "Emma Davis",
-      date: "December 10, 2023",
-      readTime: "5 min read",
-      views: "1.2k",
-      comments: 8,
+      date: "January 8, 2024",
+      readTime: "7 min read",
+      views: "1.8k",
+      comments: 15,
       category: "Design",
-      image: "/api/placeholder/400/250",
-      tags: ["Responsive", "Mobile", "CSS"]
+      image: "/src/assets/responsive-design-post.jpg",
+      tags: ["CSS", "Grid", "Flexbox", "Responsive"]
     },
     {
       id: 4,
-      title: "E-commerce Security: Protecting Your Online Store",
-      excerpt: "Essential security measures every e-commerce business should implement to protect customer data.",
+      title: "E-commerce Security Breaches: 5 Real Cases & Prevention Strategies",
+      excerpt: "Analysis of recent security breaches at major retailers including Target and Shopify stores. Learn from their mistakes with our 12-point security checklist that prevented attacks on 200+ client stores.",
       author: "David Wilson",
-      date: "December 8, 2023",
-      readTime: "7 min read",
-      views: "950",
-      comments: 12,
+      date: "January 5, 2024",
+      readTime: "11 min read",
+      views: "1.4k",
+      comments: 33,
       category: "Security",
-      image: "/api/placeholder/400/250",
-      tags: ["Security", "E-commerce", "SSL"]
+      image: "/src/assets/ecommerce-security-post.jpg",
+      tags: ["Security", "E-commerce", "SSL", "Payment Processing"]
     },
     {
       id: 5,
-      title: "React vs Vue: Choosing the Right Framework",
-      excerpt: "Compare the pros and cons of React and Vue.js to make an informed decision for your next project.",
+      title: "React Server Components: Production Ready or Experimental?",
+      excerpt: "We tested React Server Components in 10 production apps. Here's what worked, what didn't, and whether you should migrate from Next.js App Router. Includes performance metrics and migration costs.",
       author: "Lisa Anderson",
-      date: "December 5, 2023",
-      readTime: "10 min read",
-      views: "2.1k",
-      comments: 31,
+      date: "January 3, 2024",
+      readTime: "14 min read",
+      views: "2.9k",
+      comments: 56,
       category: "Development",
       image: "/src/assets/react-vue-post.jpg",
-      tags: ["React", "Vue", "JavaScript"]
+      tags: ["React", "Server Components", "Next.js", "Performance"]
     },
     {
       id: 6,
-      title: "Digital Marketing Strategies That Actually Work",
-      excerpt: "Proven digital marketing strategies to grow your business and increase conversions.",
+      title: "PPC Campaign Optimization: How We Reduced CPA by 67%",
+      excerpt: "Case study of optimizing Google Ads and Facebook campaigns for a SaaS startup. Detailed breakdown of bid strategies, audience targeting, and creative testing that generated $2.3M in revenue.",
       author: "Tom Rodriguez",
-      date: "December 3, 2023",
-      readTime: "9 min read",
-      views: "1.5k",
-      comments: 19,
+      date: "December 30, 2023",
+      readTime: "10 min read",
+      views: "2.1k",
+      comments: 41,
       category: "Marketing",
-      image: "/api/placeholder/400/250",
-      tags: ["Marketing", "Strategy", "Growth"]
+      image: "/src/assets/digital-marketing-post.jpg",
+      tags: ["PPC", "Google Ads", "Facebook Ads", "ROI"]
     },
     {
       id: 7,
-      title: "The Complete Guide to Website Performance Optimization",
-      excerpt: "Speed up your website with these proven performance optimization techniques and tools.",
+      title: "Core Web Vitals Optimization: From 2.8s to 0.6s Load Time",
+      excerpt: "Step-by-step guide to optimizing website performance using Lighthouse, WebPageTest, and custom monitoring. Real case study showing how we improved an e-commerce site's conversion rate by 23%.",
       author: "Kelly Brown",
-      date: "November 30, 2023",
-      readTime: "12 min read",
-      views: "1.7k",
-      comments: 22,
+      date: "December 28, 2023",
+      readTime: "15 min read",
+      views: "2.7k",
+      comments: 38,
       category: "Performance",
-      image: "/api/placeholder/400/250",
-      tags: ["Performance", "Speed", "Optimization"]
+      image: "/src/assets/performance-optimization-post.jpg",
+      tags: ["Performance", "Web Vitals", "Speed", "Conversion"]
     }
   ];
 
@@ -133,19 +133,19 @@ const Blogs = () => {
 
   const recentPosts = [
     {
-      title: "10 Common Web Development Mistakes to Avoid",
-      date: "December 14, 2023",
-      views: "890"
+      title: "Node.js vs Deno: Performance Comparison 2024",
+      date: "January 12, 2024",
+      views: "1.2k"
     },
     {
-      title: "How to Choose the Right Hosting Provider",
-      date: "December 11, 2023",
-      views: "1.1k"
+      title: "AWS vs Azure vs GCP: Cost Analysis for Startups",
+      date: "January 9, 2024",
+      views: "1.8k"
     },
     {
-      title: "WordPress vs Custom Development: Pros and Cons",
-      date: "December 9, 2023",
-      views: "760"
+      title: "Docker Container Security: Production Best Practices",
+      date: "January 6, 2024",
+      views: "950"
     }
   ];
 
