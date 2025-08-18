@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { Link } from 'react-router-dom';
 import { 
   Calendar, 
   Clock, 
@@ -262,10 +263,12 @@ const Blogs = () => {
                       </div>
                     </div>
                     
-                    <Button variant="hero" className="group">
-                      Read Full Article
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
+                    <Link to={`/blog/${featuredPost.id}`}>
+                      <Button variant="hero" className="group">
+                        Read Full Article
+                        <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </Card>
@@ -331,10 +334,12 @@ const Blogs = () => {
                             </div>
                           </div>
                           
-                          <Button variant="outline" className="w-full group">
-                            Read More
-                            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                          </Button>
+                          <Link to={`/blog/${post.id}`}>
+                            <Button variant="outline" className="w-full group">
+                              Read More
+                              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                            </Button>
+                          </Link>
                         </CardContent>
                       </Card>
                     ))}
