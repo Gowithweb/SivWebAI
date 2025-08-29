@@ -126,6 +126,268 @@ const BlogPost = () => {
       category: "SEO",
       image: "/src/assets/seo-post.jpg",
       tags: ["SEO", "Performance", "Google", "Web Vitals"]
+    },
+    '3': {
+      id: 3,
+      title: "Responsive Design Best Practices for Modern Web Development",
+      content: `
+        <h2>Why Responsive Design Matters More Than Ever</h2>
+        <p>With mobile traffic accounting for over 58% of global web traffic, responsive design isn't just a nice-to-have—it's essential for business success. Our analysis of 500+ websites shows that responsive sites have 67% higher conversion rates.</p>
+        
+        <h2>Mobile-First Approach</h2>
+        <p>Starting with mobile designs ensures your core content and functionality work on the most constrained devices first. This approach has helped our clients reduce bounce rates by an average of 23%.</p>
+        
+        <h3>Key Mobile-First Principles:</h3>
+        <ul>
+          <li>Progressive enhancement from small to large screens</li>
+          <li>Touch-friendly interface elements (minimum 44px tap targets)</li>
+          <li>Simplified navigation and streamlined content</li>
+          <li>Optimized images and compressed assets</li>
+        </ul>
+        
+        <h2>CSS Grid and Flexbox Mastery</h2>
+        <p>Modern CSS layout systems have revolutionized responsive design. Here's how to leverage them effectively:</p>
+        
+        <h3>CSS Grid for Complex Layouts:</h3>
+        <ul>
+          <li>Perfect for magazine-style layouts and dashboards</li>
+          <li>Use fr units for flexible column sizing</li>
+          <li>Implement grid-template-areas for semantic layouts</li>
+          <li>Combine with CSS subgrid for nested layouts</li>
+        </ul>
+        
+        <h3>Flexbox for Component-Level Design:</h3>
+        <ul>
+          <li>Ideal for navigation bars and card layouts</li>
+          <li>Use flex-wrap for responsive item wrapping</li>
+          <li>Leverage align-items and justify-content for perfect alignment</li>
+        </ul>
+        
+        <h2>Performance-First Responsive Images</h2>
+        <p>Images account for 65% of average page weight. Our optimization strategy has reduced image load times by 45% across client projects:</p>
+        
+        <ul>
+          <li>Use picture element with multiple source formats (WebP, AVIF)</li>
+          <li>Implement srcset for different screen densities</li>
+          <li>Add loading="lazy" for below-the-fold images</li>
+          <li>Set explicit width and height to prevent layout shifts</li>
+        </ul>
+        
+        <h2>Testing Across Real Devices</h2>
+        <p>Browser dev tools are great, but nothing beats testing on actual devices. We maintain a device lab with 15+ devices representing different screen sizes, operating systems, and performance levels.</p>
+        
+        <h2>Common Responsive Design Mistakes</h2>
+        <ul>
+          <li>Not testing on actual devices</li>
+          <li>Ignoring landscape orientation on mobile</li>
+          <li>Using fixed pixel values instead of relative units</li>
+          <li>Forgetting about touch interactions</li>
+          <li>Not optimizing for intermediate screen sizes</li>
+        </ul>
+        
+        <h2>Results We've Achieved</h2>
+        <p>Implementing these responsive design practices has delivered measurable results for our clients:</p>
+        <ul>
+          <li>40% increase in mobile conversion rates</li>
+          <li>60% reduction in mobile bounce rates</li>
+          <li>25% improvement in overall user engagement</li>
+          <li>30% faster page load times across all devices</li>
+        </ul>
+      `,
+      author: "Emma Rodriguez",
+      date: "January 8, 2024",
+      readTime: "10 min read",
+      views: "4.1k",
+      comments: 35,
+      category: "Web Development",
+      image: "/src/assets/responsive-design-post.jpg",
+      tags: ["Responsive Design", "CSS", "Mobile", "UX", "Performance"]
+    },
+    '4': {
+      id: 4,
+      title: "Website Performance Optimization: From 5s to 1.2s Load Time",
+      content: `
+        <h2>The Performance Crisis</h2>
+        <p>We recently helped TechCorp reduce their homepage load time from 5.2 seconds to just 1.2 seconds, resulting in a 156% increase in conversions. Here's exactly how we did it.</p>
+        
+        <h2>Initial Performance Audit</h2>
+        <p>Before optimization, TechCorp's site suffered from:</p>
+        <ul>
+          <li>Unoptimized images totaling 4.2MB</li>
+          <li>37 render-blocking JavaScript files</li>
+          <li>No content delivery network (CDN)</li>
+          <li>Inefficient database queries averaging 2.1s</li>
+        </ul>
+        
+        <h2>Image Optimization Strategy</h2>
+        <p>Images were the biggest culprit, accounting for 78% of page weight. Our solution:</p>
+        
+        <h3>Format Modernization:</h3>
+        <ul>
+          <li>Converted JPEG images to WebP (45% size reduction)</li>
+          <li>Implemented AVIF for modern browsers (65% size reduction)</li>
+          <li>Used SVG for logos and simple graphics</li>
+          <li>Applied progressive JPEG loading for large images</li>
+        </ul>
+        
+        <h3>Responsive Image Implementation:</h3>
+        <ul>
+          <li>Created 5 different sizes for each image</li>
+          <li>Used srcset and sizes attributes properly</li>
+          <li>Implemented lazy loading for below-fold content</li>
+          <li>Added proper alt text for accessibility</li>
+        </ul>
+        
+        <h2>JavaScript Optimization</h2>
+        <p>We reduced JavaScript bundle size by 68% through:</p>
+        
+        <ul>
+          <li>Code splitting by route and component</li>
+          <li>Tree shaking to eliminate unused code</li>
+          <li>Dynamic imports for non-critical features</li>
+          <li>Service worker implementation for caching</li>
+        </ul>
+        
+        <h2>CSS Performance Improvements</h2>
+        <ul>
+          <li>Critical CSS inlining for above-fold content</li>
+          <li>CSS minification and gzip compression</li>
+          <li>Removed unused CSS rules (reduced by 52%)</li>
+          <li>Implemented CSS containment for layout optimization</li>
+        </ul>
+        
+        <h2>Server-Side Optimizations</h2>
+        <p>Backend improvements delivered significant gains:</p>
+        
+        <ul>
+          <li>Database query optimization reduced response time by 73%</li>
+          <li>Implemented Redis caching for frequently accessed data</li>
+          <li>Enabled gzip compression for all text-based assets</li>
+          <li>Set up CDN with edge locations worldwide</li>
+        </ul>
+        
+        <h2>Monitoring and Continuous Improvement</h2>
+        <p>Performance optimization is ongoing. We implemented:</p>
+        
+        <ul>
+          <li>Real User Monitoring (RUM) for actual user metrics</li>
+          <li>Automated Lighthouse CI for regression detection</li>
+          <li>Performance budgets to prevent future bloat</li>
+          <li>Monthly performance audits and optimizations</li>
+        </ul>
+        
+        <h2>Measurable Business Impact</h2>
+        <p>The performance improvements delivered exceptional results:</p>
+        
+        <ul>
+          <li>156% increase in conversion rate</li>
+          <li>89% reduction in bounce rate</li>
+          <li>234% improvement in page views per session</li>
+          <li>67% increase in average session duration</li>
+          <li>$2.3M additional annual revenue attributed to speed improvements</li>
+        </ul>
+      `,
+      author: "Alex Thompson",
+      date: "January 5, 2024",
+      readTime: "15 min read",
+      views: "5.8k",
+      comments: 67,
+      category: "Performance",
+      image: "/src/assets/performance-optimization-post.jpg",
+      tags: ["Performance", "Optimization", "Core Web Vitals", "Speed", "Conversion"]
+    },
+    '5': {
+      id: 5,
+      title: "E-commerce Security: Protecting Your Online Store from Cyber Threats",
+      content: `
+        <h2>The Rising Threat Landscape</h2>
+        <p>E-commerce cyber attacks increased by 32% in 2024, with average data breach costs reaching $4.2 million. Our security audit of 100 online stores revealed that 78% had at least one critical vulnerability.</p>
+        
+        <h2>Essential Security Measures</h2>
+        <h3>SSL/TLS Implementation</h3>
+        <p>Every e-commerce site must have proper encryption:</p>
+        <ul>
+          <li>Use TLS 1.3 for maximum security</li>
+          <li>Implement HTTP Strict Transport Security (HSTS)</li>
+          <li>Set up proper certificate pinning</li>
+          <li>Regular SSL certificate monitoring and renewal</li>
+        </ul>
+        
+        <h3>Payment Security (PCI DSS Compliance)</h3>
+        <ul>
+          <li>Never store credit card data directly</li>
+          <li>Use tokenization for payment processing</li>
+          <li>Implement strong access controls</li>
+          <li>Regular security testing and vulnerability scans</li>
+        </ul>
+        
+        <h2>Advanced Threat Protection</h2>
+        <p>Modern e-commerce sites face sophisticated attacks requiring advanced defenses:</p>
+        
+        <h3>Web Application Firewall (WAF):</h3>
+        <ul>
+          <li>Blocks SQL injection and XSS attacks</li>
+          <li>Rate limiting to prevent DDoS attacks</li>
+          <li>Geo-blocking for suspicious regions</li>
+          <li>Real-time threat intelligence integration</li>
+        </ul>
+        
+        <h3>Fraud Detection Systems:</h3>
+        <ul>
+          <li>Machine learning-based transaction analysis</li>
+          <li>Device fingerprinting for user verification</li>
+          <li>Behavioral analytics to detect anomalies</li>
+          <li>Multi-factor authentication for high-value transactions</li>
+        </ul>
+        
+        <h2>Data Protection and Privacy</h2>
+        <p>Customer data protection isn't just good practice—it's legally required:</p>
+        
+        <ul>
+          <li>GDPR compliance for European customers</li>
+          <li>CCPA compliance for California residents</li>
+          <li>Data encryption at rest and in transit</li>
+          <li>Regular data backups with encryption</li>
+          <li>Clear privacy policies and consent management</li>
+        </ul>
+        
+        <h2>Security Monitoring and Incident Response</h2>
+        <p>24/7 monitoring is crucial for early threat detection:</p>
+        
+        <ul>
+          <li>Security Information and Event Management (SIEM)</li>
+          <li>Automated threat detection and alerts</li>
+          <li>Incident response playbooks</li>
+          <li>Regular security drills and training</li>
+        </ul>
+        
+        <h2>Mobile Security Considerations</h2>
+        <p>With 73% of e-commerce traffic from mobile devices:</p>
+        
+        <ul>
+          <li>Mobile app security testing</li>
+          <li>API security for mobile backends</li>
+          <li>Secure mobile payment integration</li>
+          <li>App store security compliance</li>
+        </ul>
+        
+        <h2>ROI of Security Investment</h2>
+        <p>Our clients who implemented comprehensive security saw:</p>
+        <ul>
+          <li>99.7% reduction in successful cyber attacks</li>
+          <li>85% decrease in fraud-related chargebacks</li>
+          <li>34% increase in customer trust scores</li>
+          <li>$1.2M average savings from prevented breaches</li>
+        </ul>
+      `,
+      author: "Jennifer Kim",
+      date: "January 3, 2024",
+      readTime: "11 min read",
+      views: "3.9k",
+      comments: 41,
+      category: "Security",
+      image: "/src/assets/ecommerce-security-post.jpg",
+      tags: ["Security", "E-commerce", "Cybersecurity", "PCI DSS", "Privacy"]
     }
   };
 

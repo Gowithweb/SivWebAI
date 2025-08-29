@@ -1,0 +1,58 @@
+/* Color Scheme Options for GOwithWeb */
+
+/* Option 1: Ocean Depths - Professional & Trustworthy */
+.ocean-depths {
+  --primary: 201 96% 32%;           /* Deep Ocean Blue */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 200 50% 95%;         /* Light Ocean Mist */
+  --secondary-foreground: 201 96% 32%;
+  --accent: 173 80% 40%;            /* Teal Accent */
+  --accent-foreground: 0 0% 98%;
+  --background: 220 13% 18%;        /* Dark Navy */
+  --foreground: 0 0% 95%;
+  --muted: 215 13% 25%;
+  --muted-foreground: 0 0% 70%;
+  --border: 215 13% 30%;
+  --input: 215 13% 25%;
+  --ring: 173 80% 40%;
+  --gradient-primary: linear-gradient(135deg, hsl(201 96% 32%), hsl(173 80% 40%));
+  --gradient-accent: linear-gradient(45deg, hsl(173 80% 40%), hsl(201 96% 45%));
+}
+
+/* Option 2: Sunset Glow - Creative & Energetic */
+.sunset-glow {
+  --primary: 14 90% 53%;            /* Vibrant Orange */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 45 93% 47%;          /* Golden Yellow */
+  --secondary-foreground: 0 0% 9%;
+  --accent: 262 83% 58%;            /* Purple Accent */
+  --accent-foreground: 0 0% 98%;
+  --background: 0 0% 3%;            /* Deep Black */
+  --foreground: 0 0% 95%;
+  --muted: 0 0% 10%;
+  --muted-foreground: 0 0% 70%;
+  --border: 0 0% 15%;
+  --input: 0 0% 10%;
+  --ring: 14 90% 53%;
+  --gradient-primary: linear-gradient(135deg, hsl(14 90% 53%), hsl(45 93% 47%));
+  --gradient-accent: linear-gradient(45deg, hsl(262 83% 58%), hsl(14 90% 53%));
+}
+
+/* Option 3: Forest Sage - Natural & Calming */
+.forest-sage {
+  --primary: 152 69% 31%;           /* Forest Green */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 79 81% 56%;          /* Sage Green */
+  --secondary-foreground: 0 0% 9%;
+  --accent: 34 78% 65%;             /* Warm Beige */
+  --accent-foreground: 0 0% 9%;
+  --background: 160 9% 8%;          /* Dark Forest */
+  --foreground: 0 0% 95%;
+  --muted: 160 9% 15%;
+  --muted-foreground: 0 0% 70%;
+  --border: 160 9% 20%;
+  --input: 160 9% 15%;
+  --ring: 152 69% 31%;
+  --gradient-primary: linear-gradient(135deg, hsl(152 69% 31%), hsl(79 81% 56%));
+  --gradient-accent: linear-gradient(45deg, hsl(34 78% 65%), hsl(152 69% 31%));
+}
