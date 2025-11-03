@@ -87,11 +87,11 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-container">
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className={`hover-lift shadow-custom ${service.popular ? 'ring-2 ring-primary shadow-primary' : ''} bg-gradient-card border-0`}
+              className={`interactive-card shine-effect shadow-custom ${service.popular ? 'ring-2 ring-primary shadow-primary' : ''} bg-gradient-card border-0`}
             >
               {service.popular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -102,7 +102,7 @@ const ServicesSection = () => {
               )}
               
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4 rotate-on-hover">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
                 <CardTitle className="text-xl font-bold text-foreground">{service.title}</CardTitle>

@@ -164,7 +164,7 @@ All colors MUST be HSL for consistency.
 }
 
 @layer components {
-  /* Enhanced Button Variants */
+  /* Enhanced Button Variants with Advanced Effects */
   .btn-hero {
     @apply bg-gradient-to-r from-primary via-secondary to-accent-bright text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-primary hover:shadow-glow hover:scale-105 hover:-translate-y-1 transition-all duration-500 relative overflow-hidden;
   }
@@ -172,6 +172,16 @@ All colors MUST be HSL for consistency.
   .btn-hero::before {
     content: '';
     @apply absolute inset-0 bg-gradient-to-r from-primary-glow to-secondary-glow opacity-0 hover:opacity-100 transition-opacity duration-500 z-0;
+  }
+
+  .btn-hero::after {
+    content: '';
+    @apply absolute top-1/2 left-1/2 w-0 h-0 rounded-full bg-white/30 transition-all duration-700 ease-out;
+    transform: translate(-50%, -50%);
+  }
+
+  .btn-hero:hover::after {
+    @apply w-96 h-96;
   }
 
   .btn-outline-hero {
@@ -195,9 +205,42 @@ All colors MUST be HSL for consistency.
     @apply absolute inset-0 bg-gradient-to-r from-white/10 to-white/20 opacity-0 hover:opacity-100 transition-opacity duration-500;
   }
 
+  /* Ripple Effect Button */
+  .btn-ripple {
+    @apply relative overflow-hidden;
+  }
+
+  .btn-ripple::after {
+    content: '';
+    @apply absolute top-1/2 left-1/2 w-0 h-0 rounded-full bg-white/40;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  .btn-ripple:active::after {
+    @apply w-80 h-80;
+  }
+
   /* Interactive Link Styles */
   .nav-link {
     @apply relative font-medium transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+
+  /* Shine Effect */
+  .shine-effect {
+    @apply relative overflow-hidden;
+  }
+
+  .shine-effect::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-full;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+  }
+
+  .shine-effect:hover::before {
+    transform: translateX(100%);
   }
 
   /* Gradient backgrounds */
@@ -260,16 +303,51 @@ All colors MUST be HSL for consistency.
   }
 
   .hover-lift {
-    @apply transition-all duration-500 hover:-translate-y-3 hover:shadow-xl;
+    @apply transition-all duration-700 ease-out hover:-translate-y-4 hover:shadow-xl hover:rotate-1;
   }
 
   .hover-glow {
-    @apply transition-all duration-300 hover:shadow-glow hover:scale-[1.02];
+    @apply transition-all duration-500 hover:shadow-glow hover:scale-[1.03];
   }
 
   .interactive-card {
-    @apply transition-all duration-500 hover:-translate-y-3 hover:shadow-xl hover:scale-[1.02] cursor-pointer;
+    @apply transition-all duration-700 hover:-translate-y-4 hover:shadow-xl hover:scale-[1.03] cursor-pointer relative overflow-hidden;
   }
+
+  .interactive-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent-bright/5 opacity-0 transition-opacity duration-500;
+  }
+
+  .interactive-card:hover::before {
+    @apply opacity-100;
+  }
+
+  /* 3D Tilt Effect */
+  .tilt-card {
+    @apply transform-gpu transition-transform duration-300 ease-out;
+    perspective: 1000px;
+  }
+
+  /* Magnetic Effect */
+  .magnetic {
+    @apply transition-transform duration-200 ease-out;
+  }
+
+  /* Stagger Animation Container */
+  .stagger-container > * {
+    @apply opacity-0 translate-y-8;
+    animation: staggerFadeIn 0.6s ease-out forwards;
+  }
+
+  .stagger-container > *:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-container > *:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-container > *:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-container > *:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-container > *:nth-child(5) { animation-delay: 0.5s; }
+  .stagger-container > *:nth-child(6) { animation-delay: 0.6s; }
+  .stagger-container > *:nth-child(7) { animation-delay: 0.7s; }
+  .stagger-container > *:nth-child(8) { animation-delay: 0.8s; }
 
   .gradient-text {
     @apply bg-gradient-to-r from-primary via-secondary to-accent-bright bg-clip-text text-transparent;
@@ -281,6 +359,91 @@ All colors MUST be HSL for consistency.
 
   .parallax-bg {
     @apply bg-fixed bg-center bg-cover;
+  }
+
+  /* Morphing Background */
+  .morph-bg {
+    background: linear-gradient(-45deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent-bright)), hsl(var(--primary-glow)));
+    background-size: 400% 400%;
+    animation: morphGradient 15s ease infinite;
+  }
+
+  /* Particle Effect Background */
+  .particle-bg {
+    @apply relative overflow-hidden;
+  }
+
+  .particle-bg::before,
+  .particle-bg::after {
+    content: '';
+    @apply absolute rounded-full blur-3xl opacity-20;
+    animation: floatParticle 20s infinite ease-in-out;
+  }
+
+  .particle-bg::before {
+    @apply w-96 h-96 bg-primary;
+    top: -10%;
+    left: -10%;
+  }
+
+  .particle-bg::after {
+    @apply w-80 h-80 bg-accent-bright;
+    bottom: -10%;
+    right: -10%;
+    animation-delay: -10s;
+  }
+
+  /* Reveal Animation */
+  .reveal {
+    @apply opacity-0 translate-y-12;
+    animation: reveal 0.8s ease-out forwards;
+  }
+
+  /* Slide from sides */
+  .slide-in-left {
+    @apply opacity-0 -translate-x-12;
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+
+  .slide-in-right {
+    @apply opacity-0 translate-x-12;
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+
+  /* Scale Pulse */
+  .scale-pulse {
+    animation: scalePulse 2s ease-in-out infinite;
+  }
+
+  /* Bounce Subtle */
+  .bounce-subtle {
+    animation: bounceSubtle 2s ease-in-out infinite;
+  }
+
+  /* Rotate On Hover */
+  .rotate-on-hover {
+    @apply transition-transform duration-500;
+  }
+
+  .rotate-on-hover:hover {
+    @apply rotate-6 scale-110;
+  }
+
+  /* Border Animation */
+  .border-animate {
+    @apply relative;
+  }
+
+  .border-animate::before {
+    content: '';
+    @apply absolute inset-0 rounded-lg;
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent-bright)), hsl(var(--secondary)));
+    background-size: 200% 100%;
+    animation: borderShift 3s linear infinite;
+    padding: 2px;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
   }
 }
 
@@ -352,8 +515,118 @@ All colors MUST be HSL for consistency.
     }
   }
 
+  @keyframes staggerFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes morphGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes floatParticle {
+    0%, 100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    33% {
+      transform: translate(30px, -50px) rotate(120deg);
+    }
+    66% {
+      transform: translate(-20px, 20px) rotate(240deg);
+    }
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes scalePulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes bounceSubtle {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes borderShift {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 200% 0%;
+    }
+  }
+
   /* Utility classes */
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Scroll-triggered animations */
+  @supports (animation-timeline: view()) {
+    .scroll-reveal {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+    }
+
+    .scroll-slide-left {
+      animation: slideInLeft linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+    }
+
+    .scroll-slide-right {
+      animation: slideInRight linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
+    }
   }
 }
