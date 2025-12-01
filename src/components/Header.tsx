@@ -6,27 +6,27 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-primary/95 via-secondary/95 to-accent-bright/95 backdrop-blur-md border-b border-white/20 shadow-2xl">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary via-secondary to-accent-bright rounded-xl flex items-center justify-center shadow-primary group-hover:shadow-glow transition-all duration-300 group-hover:scale-110">
-              <Globe className="w-6 h-6 text-white" />
+            <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-rainbow transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+              <Globe className="w-7 h-7 bg-gradient-to-br from-primary via-secondary to-accent-bright bg-clip-text text-transparent" />
             </div>
-            <span className="text-2xl font-bold gradient-text">SivWebAI</span>
+            <span className="text-3xl font-black text-white drop-shadow-lg">SivWebAI</span>
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="/" className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Home</a>
-            <a href="/services" className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Services</a>
-            <a href="/projects" className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Projects</a>
-            <a href="/ai-services" className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">AI Services</a>
-            <a href="/tools" className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Tools</a>
-            <a href="/team" className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">About Us</a>
-            <a href="/blog" className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Blog</a>
-            <a href="/contact" className="relative text-foreground hover:text-primary transition-all duration-300 font-medium after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-primary after:to-accent-bright after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Contact</a>
+          <nav className="hidden md:flex items-center space-x-6">
+            <a href="/" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-accent-cyan after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Home</a>
+            <a href="/services" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-accent-cyan after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Services</a>
+            <a href="/projects" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-accent-cyan after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Projects</a>
+            <a href="/ai-services" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-accent-cyan after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">AI Services</a>
+            <a href="/tools" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-accent-cyan after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Tools</a>
+            <a href="/team" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-accent-cyan after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">About Us</a>
+            <a href="/blog" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-accent-cyan after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Blog</a>
+            <a href="/contact" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-accent-cyan after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Contact</a>
           </nav>
 
           {/* Desktop CTA Buttons */}
@@ -34,27 +34,27 @@ const Header = () => {
             <Button 
               variant="outline" 
               onClick={() => window.open('https://client.sivwebai.com', '_blank')}
-              className="group font-semibold"
+              className="group font-black border-white/40 text-white hover:bg-white hover:text-primary"
             >
-              <Shield className="w-4 h-4 mr-2 group-hover:animate-pulse" />
+              <Shield className="w-5 h-5 mr-2 group-hover:animate-pulse" />
               Client Portal
             </Button>
             <Button 
               variant="hero"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="group font-semibold"
+              className="group font-black"
             >
-              <Zap className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+              <Zap className="w-5 h-5 mr-2 group-hover:animate-bounce" />
               Get Started Free
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground hover:text-primary transition-colors"
+            className="md:hidden text-white hover:text-accent-lime transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
           </button>
         </div>
 

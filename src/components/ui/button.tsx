@@ -5,29 +5,29 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-semibold ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-bold ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-gradient-to-r from-primary via-primary-glow to-secondary text-primary-foreground shadow-md hover:shadow-primary hover:scale-[1.02] hover:-translate-y-0.5",
+        default: "bg-gradient-to-r from-primary via-secondary to-accent-bright text-white shadow-xl hover:shadow-rainbow hover:scale-[1.05] hover:-translate-y-1",
         destructive:
-          "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90 hover:shadow-lg hover:scale-[1.02]",
+          "bg-gradient-to-r from-destructive to-destructive/80 text-destructive-foreground shadow-lg hover:shadow-xl hover:scale-[1.03]",
         outline:
-          "border-2 border-primary/30 bg-background text-primary hover:border-primary hover:bg-primary hover:text-primary-foreground hover:shadow-md transition-all",
+          "border-3 border-primary/40 bg-background/50 backdrop-blur-sm text-primary hover:border-primary hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white hover:shadow-primary transition-all",
         secondary:
-          "bg-gradient-to-r from-secondary to-secondary-glow text-secondary-foreground shadow-md hover:shadow-accent hover:scale-[1.02]",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline hover:text-primary-glow",
-        premium: "bg-gradient-to-r from-primary via-secondary to-accent-bright text-white shadow-lg hover:shadow-glow hover:scale-[1.03] hover:-translate-y-0.5 relative overflow-hidden",
-        hero: "bg-gradient-to-r from-primary via-secondary to-accent-bright text-white px-8 py-4 rounded-xl font-bold text-base shadow-xl hover:shadow-glow hover:scale-[1.03] hover:-translate-y-1 relative overflow-hidden",
-        accent: "bg-gradient-to-r from-accent-bright to-secondary text-white shadow-md hover:shadow-accent hover:scale-[1.02]",
-        success: "bg-gradient-to-r from-success to-success-glow text-success-foreground shadow-md hover:shadow-lg hover:scale-[1.02]",
+          "bg-gradient-to-r from-accent-bright to-secondary text-white shadow-lg hover:shadow-accent hover:scale-[1.04]",
+        ghost: "hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 hover:text-primary",
+        link: "text-primary underline-offset-4 hover:underline hover:text-secondary",
+        premium: "bg-gradient-to-r from-primary via-secondary via-accent-bright to-accent-lime text-white shadow-2xl hover:shadow-rainbow hover:scale-[1.05] hover:-translate-y-1 relative overflow-hidden",
+        hero: "bg-gradient-to-r from-primary via-secondary via-accent-bright to-accent-cyan text-white px-10 py-5 rounded-2xl font-black text-lg shadow-2xl hover:shadow-rainbow hover:scale-[1.06] hover:-translate-y-2 relative overflow-hidden animate-gradient-x",
+        accent: "bg-gradient-to-r from-accent-cyan to-accent-lime text-white shadow-xl hover:shadow-glow hover:scale-[1.04]",
+        success: "bg-gradient-to-r from-success to-accent-lime text-white shadow-lg hover:shadow-xl hover:scale-[1.03]",
       },
       size: {
-        default: "h-11 px-6 py-2.5",
-        sm: "h-9 rounded-md px-4 text-xs",
-        lg: "h-12 rounded-lg px-10 text-base",
-        icon: "h-11 w-11",
+        default: "h-12 px-8 py-3",
+        sm: "h-10 rounded-lg px-5 text-xs",
+        lg: "h-14 rounded-2xl px-12 text-lg",
+        icon: "h-12 w-12",
       },
     },
     defaultVariants: {

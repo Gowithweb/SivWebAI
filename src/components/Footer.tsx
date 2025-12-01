@@ -39,28 +39,29 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-primary via-secondary to-accent-bright text-white relative overflow-hidden">
       {/* Background Patterns */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-primary to-primary-glow rounded-full blur-xl animate-pulse-slow"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-r from-accent-bright to-secondary rounded-full blur-xl animate-float"></div>
-        <div className="absolute top-40 right-40 w-24 h-24 bg-gradient-to-r from-secondary to-accent-bright rounded-full blur-xl animate-pulse-slow delay-1000"></div>
-        <div className="absolute bottom-40 left-40 w-28 h-28 bg-gradient-to-r from-primary-glow to-primary rounded-full blur-xl animate-float delay-500"></div>
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-10 left-10 w-48 h-48 bg-gradient-to-r from-accent-cyan to-accent-lime rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-20 right-20 w-56 h-56 bg-gradient-to-r from-accent-bright to-secondary rounded-full blur-3xl animate-float"></div>
+        <div className="absolute top-40 right-40 w-40 h-40 bg-gradient-to-r from-accent-lime to-accent-cyan rounded-full blur-3xl animate-pulse-slow delay-1000"></div>
+        <div className="absolute bottom-40 left-40 w-44 h-44 bg-gradient-to-r from-secondary to-accent-bright rounded-full blur-3xl animate-float delay-500"></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-primary to-accent-cyan rounded-full blur-3xl animate-pulse-slow delay-700"></div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-secondary/3 to-accent-bright/3 opacity-60"></div>
-      <div className="absolute inset-0" style={{backgroundImage: "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0)", backgroundSize: "24px 24px"}}></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-accent-cyan/10 via-accent-bright/10 to-accent-lime/10 opacity-70"></div>
+      <div className="absolute inset-0" style={{backgroundImage: "radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 2px, transparent 0)", backgroundSize: "32px 32px"}}></div>
       <div className="container mx-auto px-4 py-16 relative z-10">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary via-secondary to-accent-bright rounded-xl flex items-center justify-center shadow-lg">
-                <Globe className="w-6 h-6 text-white" />
+              <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-2xl hover:rotate-12 transition-transform duration-300">
+                <Globe className="w-8 h-8 bg-gradient-to-br from-primary via-secondary to-accent-bright bg-clip-text text-transparent" />
               </div>
-              <span className="text-2xl font-bold">SivWebAI</span>
+              <span className="text-3xl font-black drop-shadow-lg">SivWebAI</span>
             </div>
-            <p className="text-white/80 mb-6 text-sm">
+            <p className="text-white/95 mb-6 text-base font-medium leading-relaxed">
               Next-generation web solutions powered by AI. Offering cutting-edge web development, hosting, and digital services with 24/7 support and 99.9% uptime.
             </p>
             
