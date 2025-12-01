@@ -21,7 +21,7 @@ const Footer = () => {
       { name: "Live Chat", href: "#chat" },
     ],
     company: [
-      { name: "About GOwithWeb", href: "#about" },
+      { name: "About SivWebAI", href: "#about" },
       { name: "Data Centers", href: "#datacenters" },
       { name: "Careers", href: "#careers" },
       { name: "Partner Program", href: "#partners" },
@@ -54,14 +54,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                <Globe className="w-5 h-5 text-white" />
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-10 h-10 bg-gradient-to-br from-primary via-secondary to-accent-bright rounded-xl flex items-center justify-center shadow-lg">
+                <Globe className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-bold">GOwithWeb</span>
+              <span className="text-2xl font-bold">SivWebAI</span>
             </div>
             <p className="text-white/80 mb-6 text-sm">
-              India's premier web hosting provider offering secure, fast, and reliable hosting solutions with 24/7 support and 99.9% uptime guarantee.
+              Next-generation web solutions powered by AI. Offering cutting-edge web development, hosting, and digital services with 24/7 support and 99.9% uptime.
             </p>
             
             {/* Contact Info */}
@@ -72,7 +72,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-white/60" />
-                <span className="text-white/80">support@gowithweb.com</span>
+                <span className="text-white/80">support@sivwebai.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-white/60" />
@@ -195,8 +195,8 @@ const Footer = () => {
 
             {/* Copyright */}
             <div className="text-white/60 text-sm text-center md:text-right">
-              <p>© {currentYear} GOwithWeb. All rights reserved.</p>
-              <p className="mt-1">Trusted web hosting provider in India since 2020</p>
+              <p>© {currentYear} SivWebAI. All rights reserved.</p>
+              <p className="mt-1">Next-generation AI-powered web solutions since 2024</p>
             </div>
           </div>
         </div>
