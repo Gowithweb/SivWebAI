@@ -10,12 +10,12 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <Globe className="w-5 h-5 text-white" />
+          <a href="/" className="flex items-center space-x-3 group">
+            <div className="w-10 h-10 bg-gradient-to-br from-primary via-secondary to-accent-bright rounded-xl flex items-center justify-center shadow-primary group-hover:shadow-glow transition-all duration-300 group-hover:scale-110">
+              <Globe className="w-6 h-6 text-white" />
             </div>
-            <span className="text-2xl font-bold text-primary">GOwithWeb</span>
-          </div>
+            <span className="text-2xl font-bold gradient-text">SivWebAI</span>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -33,16 +33,16 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-4">
             <Button 
               variant="outline" 
-              onClick={() => window.open('https://client.gowithweb.com', '_blank')}
-              className="group"
+              onClick={() => window.open('https://client.sivwebai.com', '_blank')}
+              className="group font-semibold"
             >
               <Shield className="w-4 h-4 mr-2 group-hover:animate-pulse" />
-              Client Login
+              Client Portal
             </Button>
             <Button 
               variant="hero"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="group"
+              className="group font-semibold"
             >
               <Zap className="w-4 h-4 mr-2 group-hover:animate-bounce" />
               Get Started Free
