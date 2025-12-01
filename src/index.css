@@ -8,76 +8,86 @@ All colors MUST be HSL for consistency.
 
 @layer base {
   :root {
-    /* Premium Tech Theme - SivWebAI Brand */
+    /* Vibrant Multi-Color Theme - SivWebAI Bold Brand */
     --background: 0 0% 100%;
-    --foreground: 220 20% 10%;
+    --foreground: 230 25% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 10%;
+    --card-foreground: 230 25% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 10%;
+    --popover-foreground: 230 25% 12%;
 
-    /* Primary - Deep Indigo (Professional & Modern) */
-    --primary: 242 65% 38%;
+    /* Primary - Vibrant Purple (Bold & Creative) */
+    --primary: 265 85% 58%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 242 65% 52%;
-    --primary-dark: 242 65% 28%;
+    --primary-glow: 265 85% 70%;
+    --primary-dark: 265 85% 48%;
 
-    /* Secondary - Electric Blue (Tech & Innovation) */
-    --secondary: 200 95% 48%;
+    /* Secondary - Electric Pink (Energy & Innovation) */
+    --secondary: 320 85% 55%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-glow: 200 95% 60%;
+    --secondary-glow: 320 85% 68%;
 
-    /* Accent - Vibrant Cyan (CTAs & Highlights) */
-    --accent-bright: 190 100% 50%;
-    --accent-bright-foreground: 220 20% 10%;
+    /* Accent - Bright Orange (CTAs & Excitement) */
+    --accent-bright: 25 95% 55%;
+    --accent-bright-foreground: 0 0% 100%;
 
-    /* Success - Emerald Green */
-    --success: 158 70% 48%;
+    /* Accent2 - Vibrant Cyan */
+    --accent-cyan: 185 95% 50%;
+    --accent-cyan-foreground: 0 0% 100%;
+
+    /* Accent3 - Lime Green */
+    --accent-lime: 85 80% 55%;
+    --accent-lime-foreground: 230 25% 12%;
+
+    /* Success - Bright Green */
+    --success: 145 75% 50%;
     --success-foreground: 0 0% 100%;
-    --success-glow: 158 70% 60%;
+    --success-glow: 145 75% 65%;
 
-    /* Warning - Amber Gold */
-    --warning: 43 96% 56%;
-    --warning-foreground: 220 20% 10%;
+    /* Warning - Golden Yellow */
+    --warning: 45 98% 58%;
+    --warning-foreground: 230 25% 12%;
 
-    /* Muted - Sophisticated Greys */
-    --muted: 220 18% 96%;
-    --muted-foreground: 220 15% 42%;
+    /* Muted - Soft Greys */
+    --muted: 230 20% 96%;
+    --muted-foreground: 230 15% 45%;
 
-    --accent: 220 18% 94%;
-    --accent-foreground: 242 65% 38%;
+    --accent: 230 20% 94%;
+    --accent-foreground: 265 85% 58%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 90% 62%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 88%;
-    --input: 220 20% 90%;
-    --ring: 242 65% 38%;
+    --border: 230 20% 88%;
+    --input: 230 20% 90%;
+    --ring: 265 85% 58%;
 
     /* Design System Enhancements */
     --radius: 0.75rem;
 
-    /* Premium Gradients - SivWebAI Brand */
-    --gradient-primary: linear-gradient(135deg, hsl(242 65% 38%) 0%, hsl(200 95% 48%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(242 65% 28%) 0%, hsl(242 65% 38%) 30%, hsl(200 95% 48%) 70%, hsl(190 100% 50%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 18% 98%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(190 100% 50%) 0%, hsl(200 95% 48%) 100%);
-    --gradient-success: linear-gradient(135deg, hsl(158 70% 48%) 0%, hsl(158 70% 60%) 100%);
-    --gradient-glow: radial-gradient(circle at center, hsl(200 95% 60% / 0.5) 0%, transparent 70%);
-    --gradient-rainbow: linear-gradient(135deg, hsl(242 65% 38%) 0%, hsl(200 95% 48%) 25%, hsl(190 100% 50%) 50%, hsl(200 95% 60%) 75%, hsl(220 18% 94%) 100%);
-    --gradient-sunset: linear-gradient(135deg, hsl(190 100% 50%) 0%, hsl(200 95% 48%) 50%, hsl(242 65% 38%) 100%);
+    /* Vibrant Multi-Color Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(265 85% 58%) 0%, hsl(320 85% 55%) 50%, hsl(25 95% 55%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(265 85% 48%) 0%, hsl(265 85% 58%) 20%, hsl(320 85% 55%) 40%, hsl(25 95% 55%) 60%, hsl(185 95% 50%) 80%, hsl(85 80% 55%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(265 30% 98%) 50%, hsl(320 30% 98%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(25 95% 55%) 0%, hsl(320 85% 55%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(145 75% 50%) 0%, hsl(85 80% 55%) 100%);
+    --gradient-glow: radial-gradient(circle at center, hsl(320 85% 68% / 0.6) 0%, hsl(185 95% 50% / 0.3) 50%, transparent 70%);
+    --gradient-rainbow: linear-gradient(90deg, hsl(265 85% 58%) 0%, hsl(320 85% 55%) 20%, hsl(25 95% 55%) 40%, hsl(185 95% 50%) 60%, hsl(85 80% 55%) 80%, hsl(145 75% 50%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(25 95% 55%) 0%, hsl(320 85% 55%) 50%, hsl(265 85% 58%) 100%);
+    --gradient-cyber: linear-gradient(135deg, hsl(185 95% 50%) 0%, hsl(265 85% 58%) 50%, hsl(320 85% 55%) 100%);
+    --gradient-vibrant: linear-gradient(45deg, hsl(265 85% 58%) 0%, hsl(320 85% 55%) 25%, hsl(25 95% 55%) 50%, hsl(185 95% 50%) 75%, hsl(85 80% 55%) 100%);
 
-    /* Premium Shadows - SivWebAI Enhanced */
-    --shadow-sm: 0 2px 12px hsl(242 50% 20% / 0.08);
-    --shadow-md: 0 8px 32px hsl(242 50% 20% / 0.14);
-    --shadow-lg: 0 28px 64px hsl(242 50% 20% / 0.22);
-    --shadow-xl: 0 40px 88px hsl(242 50% 20% / 0.30);
-    --shadow-primary: 0 14px 48px hsl(242 65% 38% / 0.40);
-    --shadow-accent: 0 14px 48px hsl(190 100% 50% / 0.35);
-    --shadow-glow: 0 0 88px hsl(200 95% 60% / 0.55);
-    --shadow-rainbow: 0 18px 54px hsl(242 65% 38% / 0.25), 0 10px 28px hsl(200 95% 48% / 0.18), 0 5px 14px hsl(190 100% 50% / 0.12);
+    /* Vibrant Multi-Color Shadows */
+    --shadow-sm: 0 2px 14px hsl(265 60% 30% / 0.12);
+    --shadow-md: 0 10px 36px hsl(320 60% 30% / 0.18);
+    --shadow-lg: 0 30px 70px hsl(265 60% 30% / 0.25);
+    --shadow-xl: 0 45px 95px hsl(320 60% 30% / 0.35);
+    --shadow-primary: 0 16px 52px hsl(265 85% 58% / 0.45), 0 8px 26px hsl(320 85% 55% / 0.25);
+    --shadow-accent: 0 16px 52px hsl(25 95% 55% / 0.45), 0 8px 26px hsl(185 95% 50% / 0.25);
+    --shadow-glow: 0 0 100px hsl(320 85% 68% / 0.65), 0 0 60px hsl(265 85% 70% / 0.45);
+    --shadow-rainbow: 0 20px 60px hsl(265 85% 58% / 0.3), 0 12px 32px hsl(320 85% 55% / 0.22), 0 6px 16px hsl(25 95% 55% / 0.15);
 
     /* Animation variables */
     --animation-fast: 0.2s;
@@ -102,46 +112,52 @@ All colors MUST be HSL for consistency.
   }
 
   .dark {
-    --background: 242 48% 6%;
+    --background: 265 50% 8%;
     --foreground: 0 0% 98%;
 
-    --card: 242 45% 8%;
+    --card: 265 45% 10%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 242 45% 8%;
+    --popover: 265 45% 10%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 200 95% 48%;
+    --primary: 265 85% 65%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 200 95% 60%;
-    --primary-dark: 200 95% 38%;
+    --primary-glow: 265 85% 78%;
+    --primary-dark: 265 85% 55%;
 
-    --secondary: 242 65% 52%;
+    --secondary: 320 85% 62%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-glow: 242 65% 65%;
+    --secondary-glow: 320 85% 75%;
 
-    --accent-bright: 190 100% 55%;
-    --accent-bright-foreground: 242 48% 6%;
+    --accent-bright: 25 95% 62%;
+    --accent-bright-foreground: 265 50% 8%;
 
-    --success: 158 70% 52%;
+    --accent-cyan: 185 95% 58%;
+    --accent-cyan-foreground: 0 0% 100%;
+
+    --accent-lime: 85 80% 62%;
+    --accent-lime-foreground: 265 50% 8%;
+
+    --success: 145 75% 58%;
     --success-foreground: 0 0% 100%;
-    --success-glow: 158 70% 65%;
+    --success-glow: 145 75% 72%;
 
-    --warning: 43 96% 65%;
-    --warning-foreground: 242 48% 6%;
+    --warning: 45 98% 65%;
+    --warning-foreground: 265 50% 8%;
 
-    --muted: 242 35% 12%;
-    --muted-foreground: 220 15% 65%;
+    --muted: 265 35% 14%;
+    --muted-foreground: 230 15% 68%;
 
-    --accent: 242 35% 14%;
+    --accent: 265 35% 16%;
     --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 78% 45%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 242 30% 16%;
-    --input: 242 30% 16%;
-    --ring: 200 95% 48%;
+    --border: 265 30% 18%;
+    --input: 265 30% 18%;
+    --ring: 265 85% 65%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -482,11 +498,25 @@ All colors MUST be HSL for consistency.
 
   @keyframes glow {
     from {
-      box-shadow: 0 0 30px hsl(200 95% 60% / 0.6);
+      box-shadow: 0 0 35px hsl(320 85% 68% / 0.7);
     }
     to {
-      box-shadow: 0 0 60px hsl(200 95% 60% / 0.9), 0 0 90px hsl(190 100% 55% / 0.5), 0 0 120px hsl(242 65% 52% / 0.3);
+      box-shadow: 0 0 70px hsl(320 85% 68% / 1), 0 0 100px hsl(265 85% 70% / 0.6), 0 0 140px hsl(185 95% 50% / 0.4);
     }
+  }
+
+  @keyframes gradient-x {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 8s ease infinite;
   }
 
   @keyframes spin-slow {

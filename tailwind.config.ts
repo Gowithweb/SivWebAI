@@ -42,6 +42,14 @@ export default {
 					DEFAULT: 'hsl(var(--accent-bright))',
 					foreground: 'hsl(var(--accent-bright-foreground))'
 				},
+				'accent-cyan': {
+					DEFAULT: 'hsl(var(--accent-cyan))',
+					foreground: 'hsl(var(--accent-cyan-foreground))'
+				},
+				'accent-lime': {
+					DEFAULT: 'hsl(var(--accent-lime))',
+					foreground: 'hsl(var(--accent-lime-foreground))'
+				},
 				warning: {
 					DEFAULT: 'hsl(var(--warning))',
 					foreground: 'hsl(var(--warning-foreground))'
