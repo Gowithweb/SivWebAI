@@ -11,15 +11,14 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-2xl group-hover:shadow-rainbow transition-all duration-300 group-hover:scale-110 overflow-hidden">
+          <a href="/" className="flex items-center group">
+            <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-2xl group-hover:shadow-rainbow transition-all duration-300 group-hover:scale-110 overflow-hidden">
               <img 
                 src={sivwebaiLogo} 
                 alt="SivWebAI - End-to-End Web Solutions" 
-                className="w-10 h-10 object-contain"
+                className="w-12 h-12 object-contain"
               />
             </div>
-            <span className="text-2xl font-black text-white drop-shadow-lg">SivWebAI</span>
           </a>
 
           {/* Desktop Navigation */}

@@ -21,6 +21,7 @@ import {
   Smartphone,
   Star
 } from 'lucide-react';
+import blogHeroNew from '@/assets/blog-hero-new.jpg';
 
 const Blogs = () => {
   const featuredPost = {
@@ -182,30 +183,36 @@ const Blogs = () => {
         <main className="pt-20">
           {/* Hero Section */}
           <section className="relative py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 overflow-hidden">
-            <div className="absolute inset-0 opacity-10">
-              <img 
-                src="/src/assets/blog-hero.jpg" 
-                alt="Tech Blog Background" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="relative container mx-auto px-4 text-center">
-              <div className="max-w-4xl mx-auto">
-                <Badge className="mb-6 bg-gradient-primary text-white border-0">
-                  <TrendingUp className="w-4 h-4 mr-2" />
-                  Tech Blog
-                </Badge>
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                  Insights & Tutorials
-                </h1>
-                <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                  Stay ahead with the latest web development trends, SEO strategies, 
-                  and digital marketing insights from our team of experts.
-                </p>
-                <Button variant="hero" size="lg">
-                  Explore Articles
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
+            <div className="container mx-auto px-4">
+              <div className="flex flex-col lg:flex-row items-center gap-12">
+                <div className="lg:w-1/2">
+                  <Badge className="mb-6 bg-primary text-white border-0">
+                    <TrendingUp className="w-4 h-4 mr-2" />
+                    Tech Blog
+                  </Badge>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+                    Insights & Tutorials
+                  </h1>
+                  <p className="text-xl text-muted-foreground mb-8">
+                    Stay ahead with the latest web development trends, SEO strategies, 
+                    and digital marketing insights from our team of experts.
+                  </p>
+                  <Button size="lg">
+                    Explore Articles
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
+                <div className="lg:w-1/2">
+                  <div className="relative">
+                    <img 
+                      src={blogHeroNew} 
+                      alt="Blog and Tech Insights" 
+                      className="rounded-2xl shadow-2xl w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
+                    <div className="absolute -top-4 -left-4 w-32 h-32 bg-success/20 rounded-full blur-2xl"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>

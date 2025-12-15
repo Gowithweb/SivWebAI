@@ -130,34 +130,39 @@ const Services = () => {
         
         <main className="pt-16">
           {/* Hero Section with Image */}
-          <section className="relative py-24 overflow-hidden">
-            <div className="absolute inset-0">
-              <img 
-                src={servicesHeroImg} 
-                alt="Complete Web Services by SivWebAI"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-transparent"></div>
-            </div>
-            <div className="container mx-auto px-4 relative z-10">
-              <div className="max-w-2xl">
-                <Badge className="mb-6 bg-gradient-to-r from-primary to-secondary text-white border-0">
-                  Professional Services
-                </Badge>
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-                  Complete Web Services
-                </h1>
-                <p className="text-xl text-white/90 mb-8">
-                  From development to hosting, troubleshooting to ongoing support - we handle all your website needs with cutting-edge technology and 24/7 expert assistance.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-gradient-to-r from-accent-bright to-warning text-white font-bold" size="lg">
-                    Get Free Consultation
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                  <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-foreground">
-                    View Pricing
-                  </Button>
+          <section className="relative py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 overflow-hidden">
+            <div className="container mx-auto px-4">
+              <div className="flex flex-col lg:flex-row items-center gap-12">
+                <div className="lg:w-1/2">
+                  <Badge className="mb-6 bg-primary text-white border-0">
+                    Professional Services
+                  </Badge>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+                    Complete Web Services
+                  </h1>
+                  <p className="text-xl text-muted-foreground mb-8">
+                    From development to hosting, troubleshooting to ongoing support - we handle all your website needs with cutting-edge technology and 24/7 expert assistance.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button size="lg">
+                      Get Free Consultation
+                      <ArrowRight className="ml-2 w-5 h-5" />
+                    </Button>
+                    <Button variant="outline" size="lg">
+                      View Pricing
+                    </Button>
+                  </div>
+                </div>
+                <div className="lg:w-1/2">
+                  <div className="relative">
+                    <img 
+                      src={servicesHeroImg} 
+                      alt="Complete Web Services by SivWebAI"
+                      className="rounded-2xl shadow-2xl w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
+                    <div className="absolute -top-4 -left-4 w-32 h-32 bg-success/20 rounded-full blur-2xl"></div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -9,19 +9,19 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-gradient-to-r from-primary via-secondary to-accent-bright text-white shadow-xl hover:shadow-rainbow hover:scale-[1.05] hover:-translate-y-1",
+        default: "bg-primary text-white shadow-xl hover:bg-primary/90 hover:shadow-2xl hover:scale-[1.03] hover:-translate-y-0.5",
         destructive:
-          "bg-gradient-to-r from-destructive to-destructive/80 text-destructive-foreground shadow-lg hover:shadow-xl hover:scale-[1.03]",
+          "bg-destructive text-destructive-foreground shadow-lg hover:bg-destructive/90 hover:shadow-xl hover:scale-[1.02]",
         outline:
-          "border-3 border-primary/40 bg-background/50 backdrop-blur-sm text-primary hover:border-primary hover:bg-gradient-to-r hover:from-primary hover:to-secondary hover:text-white hover:shadow-primary transition-all",
+          "border-2 border-primary bg-background/50 backdrop-blur-sm text-primary hover:bg-primary hover:text-white hover:shadow-lg transition-all",
         secondary:
-          "bg-gradient-to-r from-accent-bright to-secondary text-white shadow-lg hover:shadow-accent hover:scale-[1.04]",
-        ghost: "hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 hover:text-primary",
-        link: "text-primary underline-offset-4 hover:underline hover:text-secondary",
-        premium: "bg-gradient-to-r from-primary via-secondary via-accent-bright to-accent-lime text-white shadow-2xl hover:shadow-rainbow hover:scale-[1.05] hover:-translate-y-1 relative overflow-hidden",
-        hero: "bg-gradient-to-r from-primary via-secondary via-accent-bright to-accent-cyan text-white px-10 py-5 rounded-2xl font-black text-lg shadow-2xl hover:shadow-rainbow hover:scale-[1.06] hover:-translate-y-2 relative overflow-hidden animate-gradient-x",
-        accent: "bg-gradient-to-r from-accent-cyan to-accent-lime text-white shadow-xl hover:shadow-glow hover:scale-[1.04]",
-        success: "bg-gradient-to-r from-success to-accent-lime text-white shadow-lg hover:shadow-xl hover:scale-[1.03]",
+          "bg-secondary text-white shadow-lg hover:bg-secondary/90 hover:shadow-xl hover:scale-[1.02]",
+        ghost: "hover:bg-primary/10 hover:text-primary",
+        link: "text-primary underline-offset-4 hover:underline hover:text-primary/80",
+        premium: "bg-primary text-white shadow-2xl hover:bg-primary/90 hover:shadow-xl hover:scale-[1.03] hover:-translate-y-0.5",
+        hero: "bg-primary text-white px-10 py-5 rounded-2xl font-black text-lg shadow-2xl hover:bg-primary/90 hover:shadow-xl hover:scale-[1.04] hover:-translate-y-1",
+        accent: "bg-accent text-white shadow-xl hover:bg-accent/90 hover:shadow-lg hover:scale-[1.02]",
+        success: "bg-success text-white shadow-lg hover:bg-success/90 hover:shadow-xl hover:scale-[1.02]",
       },
       size: {
         default: "h-12 px-8 py-3",

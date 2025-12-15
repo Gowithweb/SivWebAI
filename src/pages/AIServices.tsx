@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import aiServicesHero from '@/assets/ai-services-hero.jpg';
 
 const AIServices = () => {
   const aiServices = [
@@ -112,26 +113,40 @@ const AIServices = () => {
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-hero opacity-10"></div>
           <div className="container mx-auto px-4 relative">
-            <div className="text-center max-w-4xl mx-auto">
-              <div className="flex justify-center items-center space-x-2 mb-6">
-                <Bot className="w-12 h-12 text-primary animate-pulse" />
-                <h1 className="text-4xl md:text-6xl font-bold gradient-text">
+            <div className="flex flex-col lg:flex-row items-center gap-12">
+              <div className="lg:w-1/2">
+                <div className="flex items-center space-x-2 mb-6">
+                  <Bot className="w-12 h-12 text-primary animate-pulse" />
+                  <Badge className="bg-primary text-white">AI Powered</Badge>
+                </div>
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
                   AI Services
                 </h1>
+                <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+                  Harness the power of Artificial Intelligence to transform your business operations, 
+                  enhance customer experiences, and drive unprecedented growth.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg">
+                    <Zap className="w-5 h-5 mr-2" />
+                    Start AI Transformation
+                  </Button>
+                  <Button size="lg" variant="outline">
+                    <Brain className="w-5 h-5 mr-2" />
+                    View AI Demo
+                  </Button>
+                </div>
               </div>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-                Harness the power of Artificial Intelligence to transform your business operations, 
-                enhance customer experiences, and drive unprecedented growth.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="btn-hero group">
-                  <Zap className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-                  Start AI Transformation
-                </Button>
-                <Button size="lg" variant="outline" className="btn-outline-hero">
-                  <Brain className="w-5 h-5 mr-2" />
-                  View AI Demo
-                </Button>
+              <div className="lg:w-1/2">
+                <div className="relative">
+                  <img 
+                    src={aiServicesHero} 
+                    alt="AI Services - Neural Network Visualization" 
+                    className="rounded-2xl shadow-2xl w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
+                  <div className="absolute -top-4 -left-4 w-32 h-32 bg-success/20 rounded-full blur-2xl"></div>
+                </div>
               </div>
             </div>
           </div>

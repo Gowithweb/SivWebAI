@@ -28,6 +28,7 @@ import artistImg from '@/assets/artist-portfolio.jpg';
 import financeImg from '@/assets/finance-dashboard.jpg';
 import fitnessImg from '@/assets/fitness-app.jpg';
 import marketImg from '@/assets/local-market.jpg';
+import projectsHero from '@/assets/projects-hero.jpg';
 
 const Projects = () => {
   const featuredProjects = [
@@ -188,22 +189,35 @@ const Projects = () => {
         <main className="pt-20">
           {/* Hero Section */}
           <section className="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
-            <div className="container mx-auto px-4 text-center">
-              <div className="max-w-4xl mx-auto">
-                <Badge className="mb-6 bg-gradient-primary text-white border-0">
-                  Our Portfolio
-                </Badge>
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                  Success Stories
-                </h1>
-                <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                  Discover our portfolio of successful web development projects that have helped 
-                  businesses grow, engage customers, and achieve their digital goals.
-                </p>
-                <Button variant="hero" size="lg">
-                  View All Projects
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
+            <div className="container mx-auto px-4">
+              <div className="flex flex-col lg:flex-row items-center gap-12">
+                <div className="lg:w-1/2">
+                  <Badge className="mb-6 bg-primary text-white border-0">
+                    Our Portfolio
+                  </Badge>
+                  <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+                    Success Stories
+                  </h1>
+                  <p className="text-xl text-muted-foreground mb-8">
+                    Discover our portfolio of successful web development projects that have helped 
+                    businesses grow, engage customers, and achieve their digital goals.
+                  </p>
+                  <Button size="lg">
+                    View All Projects
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
+                </div>
+                <div className="lg:w-1/2">
+                  <div className="relative">
+                    <img 
+                      src={projectsHero} 
+                      alt="Projects Portfolio - Professional Workspace" 
+                      className="rounded-2xl shadow-2xl w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
+                    <div className="absolute -top-4 -left-4 w-32 h-32 bg-success/20 rounded-full blur-2xl"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
