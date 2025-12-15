@@ -6,6 +6,7 @@ import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Phone, Mail, MapPin, Clock, MessageCircle, Send } from 'lucide-react';
+import contactHero from '@/assets/contact-hero.jpg';
 
 const Contact = () => {
   const contactInfo = [
@@ -62,19 +63,34 @@ const Contact = () => {
         
         <main className="pt-20">
           {/* Hero Section */}
-          <section className="py-20 bg-gradient-hero">
-            <div className="container mx-auto px-4 text-center">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Get in Touch
-              </h1>
-              <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-                Ready to start your project or need support? We're here to help 24/7. 
-                Contact us for a free consultation and let's bring your ideas to life.
-              </p>
-              <Button size="lg" variant="secondary">
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Start Live Chat
-              </Button>
+          <section className="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
+            <div className="container mx-auto px-4">
+              <div className="flex flex-col lg:flex-row items-center gap-12">
+                <div className="lg:w-1/2">
+                  <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                    Get in Touch
+                  </h1>
+                  <p className="text-xl text-muted-foreground mb-8">
+                    Ready to start your project or need support? We're here to help 24/7. 
+                    Contact us for a free consultation and let's bring your ideas to life.
+                  </p>
+                  <Button size="lg">
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    Start Live Chat
+                  </Button>
+                </div>
+                <div className="lg:w-1/2">
+                  <div className="relative">
+                    <img 
+                      src={contactHero} 
+                      alt="Contact Support Team" 
+                      className="rounded-2xl shadow-2xl w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
+                    <div className="absolute -top-4 -left-4 w-32 h-32 bg-success/20 rounded-full blur-2xl"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 

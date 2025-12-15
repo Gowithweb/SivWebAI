@@ -56,15 +56,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-2xl hover:rotate-6 transition-transform duration-300 overflow-hidden">
+            <div className="flex items-center mb-6">
+              <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center shadow-2xl hover:rotate-6 transition-transform duration-300 overflow-hidden">
                 <img 
                   src={sivwebaiLogo} 
                   alt="SivWebAI Logo" 
-                  className="w-12 h-12 object-contain"
+                  className="w-14 h-14 object-contain"
                 />
               </div>
-              <span className="text-3xl font-black drop-shadow-lg">SivWebAI</span>
             </div>
             <p className="text-white/90 mb-6 text-base font-medium leading-relaxed">
               Your complete end-to-end web solutions partner. From development to hosting, troubleshooting to ongoing support - we handle all your website needs with 24/7 expert assistance.
