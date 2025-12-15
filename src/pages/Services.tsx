@@ -26,6 +26,7 @@ import securityServicesImg from '@/assets/security-services.jpg';
 import databaseServicesImg from '@/assets/database-services.jpg';
 import cloudServicesImg from '@/assets/cloud-services.jpg';
 import analyticsServicesImg from '@/assets/analytics-services.jpg';
+import servicesHeroImg from '@/assets/services-hero.jpg';
 
 const Services = () => {
   const mainServices = [
@@ -34,7 +35,7 @@ const Services = () => {
       title: "Web Development",
       description: "Custom websites and web applications built with modern technologies",
       features: ["React & Next.js", "Full-Stack Development", "API Integration", "Responsive Design"],
-      price: "From $999",
+      price: "From ₹49,999",
       popular: true
     },
     {
@@ -42,7 +43,7 @@ const Services = () => {
       title: "Domain & Hosting",
       description: "Secure domain registration and high-performance hosting solutions",
       features: ["Free SSL Certificate", "99.9% Uptime", "Daily Backups", "24/7 Support"],
-      price: "From $49/year",
+      price: "From ₹99/month",
       popular: false
     },
     {
@@ -50,7 +51,7 @@ const Services = () => {
       title: "SEO Optimization",
       description: "Boost your search rankings and drive organic traffic",
       features: ["Keyword Research", "On-Page SEO", "Technical SEO", "Monthly Reports"],
-      price: "From $299/month",
+      price: "From ₹14,999/month",
       popular: true
     },
     {
@@ -58,7 +59,7 @@ const Services = () => {
       title: "Digital Marketing",
       description: "Comprehensive digital marketing strategies to grow your business",
       features: ["Social Media Marketing", "PPC Campaigns", "Content Marketing", "Analytics"],
-      price: "From $499/month",
+      price: "From ₹24,999/month",
       popular: false
     },
     {
@@ -66,15 +67,15 @@ const Services = () => {
       title: "E-commerce Solutions",
       description: "Complete online store setup with payment integration",
       features: ["Shopping Cart", "Payment Gateway", "Inventory Management", "Order Tracking"],
-      price: "From $1,499",
+      price: "From ₹79,999",
       popular: true
     },
     {
       icon: Smartphone,
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile applications",
-      features: ["iOS & Android", "React Native", "Flutter", "App Store Deployment"],
-      price: "From $2,999",
+      title: "Technical Support",
+      description: "24/7 troubleshooting and maintenance services",
+      features: ["Bug Fixes", "Performance Optimization", "Security Updates", "Emergency Support"],
+      price: "From ₹9,999/month",
       popular: false
     }
   ];
@@ -118,54 +119,43 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <title>Professional Web Services - GOwithWeb | Complete Digital Solutions</title>
-        <meta name="description" content="Comprehensive web services including development, hosting, SEO, digital marketing, e-commerce, and mobile apps. Professional solutions for businesses of all sizes." />
-        <meta name="keywords" content="web services, web development, hosting, SEO services, digital marketing, e-commerce, mobile development, professional web solutions" />
-        <link rel="canonical" href="https://gowithweb.com/services" />
-        <meta property="og:title" content="Professional Web Services - Complete Digital Solutions" />
-        <meta property="og:description" content="Full-service web solutions for modern businesses. Development, hosting, SEO, marketing & more." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://gowithweb.com/services" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Professional Web Services",
-            "provider": {
-              "@type": "Organization",
-              "name": "GOwithWeb"
-            },
-            "serviceType": "Web Development and Digital Marketing Services",
-            "description": "Complete web services including development, hosting, SEO, and digital marketing"
-          })}
-        </script>
+        <title>Complete Web Services - SivWebAI | Development, Hosting & Support</title>
+        <meta name="description" content="End-to-end web solutions: development, hosting, SEO, support & troubleshooting. SivWebAI handles all your website needs with 24/7 expert assistance." />
+        <meta name="keywords" content="web services, web development, hosting, SEO services, digital marketing, e-commerce, technical support, SivWebAI" />
+        <link rel="canonical" href="https://sivwebai.com/services" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/30">
+      <div className="min-h-screen bg-background">
         <Header />
         
-        <main className="pt-20">
-          {/* Hero Section */}
-          <section className="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
-            <div className="container mx-auto px-4 text-center">
-              <div className="max-w-4xl mx-auto">
-                <Badge className="mb-6 bg-gradient-primary text-white border-0">
+        <main className="pt-16">
+          {/* Hero Section with Image */}
+          <section className="relative py-24 overflow-hidden">
+            <div className="absolute inset-0">
+              <img 
+                src={servicesHeroImg} 
+                alt="Complete Web Services by SivWebAI"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-transparent"></div>
+            </div>
+            <div className="container mx-auto px-4 relative z-10">
+              <div className="max-w-2xl">
+                <Badge className="mb-6 bg-gradient-to-r from-primary to-secondary text-white border-0">
                   Professional Services
                 </Badge>
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
                   Complete Web Services
                 </h1>
-                <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                  From concept to launch and beyond. We provide comprehensive web solutions 
-                  that help businesses thrive in the digital world with cutting-edge technology 
-                  and professional expertise.
+                <p className="text-xl text-white/90 mb-8">
+                  From development to hosting, troubleshooting to ongoing support - we handle all your website needs with cutting-edge technology and 24/7 expert assistance.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button variant="hero" size="lg" className="group">
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button className="bg-gradient-to-r from-accent-bright to-warning text-white font-bold" size="lg">
                     Get Free Consultation
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
-                  <Button variant="outline" size="lg">
+                  <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-foreground">
                     View Pricing
                   </Button>
                 </div>
