@@ -1,32 +1,37 @@
 import { useState } from 'react';
-import { Menu, X, Globe, Shield, Zap } from 'lucide-react';
+import { Menu, X, Shield, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import sivwebaiLogo from '@/assets/sivwebai-logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-primary/95 via-secondary/95 to-accent-bright/95 backdrop-blur-md border-b border-white/20 shadow-2xl">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-foreground via-primary to-secondary backdrop-blur-md border-b border-white/20 shadow-2xl">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-rainbow transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
-              <Globe className="w-7 h-7 bg-gradient-to-br from-primary via-secondary to-accent-bright bg-clip-text text-transparent" />
+            <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-2xl group-hover:shadow-rainbow transition-all duration-300 group-hover:scale-110 overflow-hidden">
+              <img 
+                src={sivwebaiLogo} 
+                alt="SivWebAI - End-to-End Web Solutions" 
+                className="w-10 h-10 object-contain"
+              />
             </div>
-            <span className="text-3xl font-black text-white drop-shadow-lg">SivWebAI</span>
+            <span className="text-2xl font-black text-white drop-shadow-lg">SivWebAI</span>
           </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <a href="/" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-accent-cyan after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Home</a>
-            <a href="/services" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-accent-cyan after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Services</a>
-            <a href="/projects" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-accent-cyan after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Projects</a>
-            <a href="/ai-services" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-accent-cyan after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">AI Services</a>
-            <a href="/tools" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-accent-cyan after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Tools</a>
-            <a href="/team" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-accent-cyan after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">About Us</a>
-            <a href="/blog" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-accent-cyan after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Blog</a>
-            <a href="/contact" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-accent-cyan after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Contact</a>
+            <a href="/" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-secondary after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Home</a>
+            <a href="/services" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-secondary after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Services</a>
+            <a href="/projects" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-secondary after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Projects</a>
+            <a href="/ai-services" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-secondary after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">AI Services</a>
+            <a href="/tools" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-secondary after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Tools</a>
+            <a href="/team" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-secondary after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">About Us</a>
+            <a href="/blog" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-secondary after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Blog</a>
+            <a href="/contact" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-secondary after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Contact</a>
           </nav>
 
           {/* Desktop CTA Buttons */}
@@ -42,7 +47,7 @@ const Header = () => {
             <Button 
               variant="hero"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="group font-black"
+              className="group font-black bg-gradient-to-r from-accent-bright to-warning text-white hover:shadow-accent"
             >
               <Zap className="w-5 h-5 mr-2 group-hover:animate-bounce" />
               Get Started Free
@@ -60,21 +65,21 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md">
+          <div className="md:hidden py-4 border-t border-white/20 bg-foreground/95 backdrop-blur-md">
             <nav className="flex flex-col space-y-4">
-              <a href="/" className="text-foreground hover:text-primary transition-colors">Home</a>
-              <a href="/services" className="text-foreground hover:text-primary transition-colors">Services</a>
-              <a href="/projects" className="text-foreground hover:text-primary transition-colors">Projects</a>
-              <a href="/ai-services" className="text-foreground hover:text-primary transition-colors">AI Services</a>
-              <a href="/tools" className="text-foreground hover:text-primary transition-colors">Tools</a>
-              <a href="/team" className="text-foreground hover:text-primary transition-colors">About Us</a>
-              <a href="/blog" className="text-foreground hover:text-primary transition-colors">Blog</a>
-              <a href="/contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
-              <div className="flex flex-col space-y-2 pt-4 border-t border-border">
-                <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  Login
+              <a href="/" className="text-white hover:text-secondary transition-colors font-medium">Home</a>
+              <a href="/services" className="text-white hover:text-secondary transition-colors font-medium">Services</a>
+              <a href="/projects" className="text-white hover:text-secondary transition-colors font-medium">Projects</a>
+              <a href="/ai-services" className="text-white hover:text-secondary transition-colors font-medium">AI Services</a>
+              <a href="/tools" className="text-white hover:text-secondary transition-colors font-medium">Tools</a>
+              <a href="/team" className="text-white hover:text-secondary transition-colors font-medium">About Us</a>
+              <a href="/blog" className="text-white hover:text-secondary transition-colors font-medium">Blog</a>
+              <a href="/contact" className="text-white hover:text-secondary transition-colors font-medium">Contact</a>
+              <div className="flex flex-col space-y-2 pt-4 border-t border-white/20">
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+                  Client Portal
                 </Button>
-                <Button className="btn-hero">Get Started Free</Button>
+                <Button className="bg-gradient-to-r from-accent-bright to-warning text-white">Get Started Free</Button>
               </div>
             </nav>
           </div>
