@@ -4,139 +4,84 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://gowithweb.com/</loc>
+    <loc>https://sivwebai.com/</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://gowithweb.com/hero-banner.jpg</image:loc>
-      <image:title>GOwithWeb - Best Web Hosting India</image:title>
-      <image:caption>Premium web hosting services in India with free domain and SSL</image:caption>
+      <image:loc>https://sivwebai.com/hero-banner.jpg</image:loc>
+      <image:title>SivWebAI - End-to-End Web Solutions India</image:title>
+      <image:caption>Complete web solutions - development, hosting, and support services in India</image:caption>
     </image:image>
   </url>
   
   <!-- Services Pages -->
   <url>
-    <loc>https://gowithweb.com/web-hosting</loc>
+    <loc>https://sivwebai.com/services</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://gowithweb.com/wordpress-hosting</loc>
+    <loc>https://sivwebai.com/web-development</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://gowithweb.com/vps-hosting</loc>
+    <loc>https://sivwebai.com/technical-support</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://gowithweb.com/dedicated-servers</loc>
+    <loc>https://sivwebai.com/ssl-security</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
+  <!-- Projects Pages -->
   <url>
-    <loc>https://gowithweb.com/domain-registration</loc>
+    <loc>https://sivwebai.com/projects</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
-  <!-- Development Services -->
+  <!-- AI Services -->
   <url>
-    <loc>https://gowithweb.com/web-development</loc>
+    <loc>https://sivwebai.com/ai-services</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Tools -->
+  <url>
+    <loc>https://sivwebai.com/tools</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
+  <!-- Blog -->
   <url>
-    <loc>https://gowithweb.com/wordpress-development</loc>
+    <loc>https://sivwebai.com/blog</loc>
     <lastmod>2024-12-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://gowithweb.com/react-development</loc>
-    <lastmod>2024-12-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://gowithweb.com/nextjs-development</loc>
-    <lastmod>2024-12-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Important Pages -->
-  <url>
-    <loc>https://gowithweb.com/contact</loc>
-    <lastmod>2024-12-20</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   
+  <!-- Contact -->
   <url>
-    <loc>https://gowithweb.com/about</loc>
+    <loc>https://sivwebai.com/contact</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://gowithweb.com/pricing</loc>
-    <lastmod>2024-12-20</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  
-  <!-- Support Pages -->
-  <url>
-    <loc>https://gowithweb.com/support</loc>
-    <lastmod>2024-12-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://gowithweb.com/knowledge-base</loc>
-    <lastmod>2024-12-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <!-- Location-based Pages -->
-  <url>
-    <loc>https://gowithweb.com/web-hosting-mumbai</loc>
-    <lastmod>2024-12-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://gowithweb.com/web-hosting-delhi</loc>
-    <lastmod>2024-12-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://gowithweb.com/web-hosting-bangalore</loc>
-    <lastmod>2024-12-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   
 </urlset>

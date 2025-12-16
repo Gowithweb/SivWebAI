@@ -130,18 +130,18 @@ const Tools = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-accent-bright/5">
       <Helmet>
-        <title>Free Web Tools | Website Analysis & Testing Tools - GOwithWeb</title>
+        <title>Free Web Tools | Website Analysis & Testing Tools - SivWebAI</title>
         <meta name="description" content="Free web tools for website analysis, SEO checking, speed testing, SSL verification, and more. Professional tools for developers and marketers." />
         <meta name="keywords" content="free web tools, website speed test, SEO checker, SSL checker, DNS lookup, IP checker, website tools" />
-        <link rel="canonical" href="https://gowithweb.com/tools" />
+        <link rel="canonical" href="https://sivwebai.com/tools" />
         
-        <meta property="og:title" content="Free Web Tools | Website Analysis & Testing Tools - GOwithWeb" />
+        <meta property="og:title" content="Free Web Tools | Website Analysis & Testing Tools - SivWebAI" />
         <meta property="og:description" content="Free web tools for website analysis, SEO checking, speed testing, SSL verification, and more. Professional tools for developers and marketers." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://gowithweb.com/tools" />
+        <meta property="og:url" content="https://sivwebai.com/tools" />
         
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free Web Tools | Website Analysis & Testing Tools - GOwithWeb" />
+        <meta name="twitter:title" content="Free Web Tools | Website Analysis & Testing Tools - SivWebAI" />
         <meta name="twitter:description" content="Free web tools for website analysis, SEO checking, speed testing, SSL verification, and more. Professional tools for developers and marketers." />
       </Helmet>
 

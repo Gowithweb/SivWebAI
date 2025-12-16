@@ -22,6 +22,18 @@ import Team from "./pages/Team";
 import Tools from "./pages/Tools";
 import NotFound from "./pages/NotFound";
 
+// Service Subpages
+import Hosting from "./pages/services/Hosting";
+import WebDesign from "./pages/services/WebDesign";
+import Development from "./pages/services/Development";
+import Security from "./pages/services/Security";
+
+// Project Subpages
+import ReactProjects from "./pages/projects/ReactProjects";
+import NodeJsProjects from "./pages/projects/NodeJsProjects";
+import WordPressProjects from "./pages/projects/WordPressProjects";
+import DrupalProjects from "./pages/projects/DrupalProjects";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -48,6 +60,19 @@ const App = () => (
             <Route path="/ai-services" element={<AIServices />} />
             <Route path="/team" element={<Team />} />
             <Route path="/tools" element={<Tools />} />
+            
+            {/* Service Subpages */}
+            <Route path="/services/hosting" element={<Hosting />} />
+            <Route path="/services/web-design" element={<WebDesign />} />
+            <Route path="/services/development" element={<Development />} />
+            <Route path="/services/security" element={<Security />} />
+            
+            {/* Project Subpages */}
+            <Route path="/projects/react" element={<ReactProjects />} />
+            <Route path="/projects/nodejs" element={<NodeJsProjects />} />
+            <Route path="/projects/wordpress" element={<WordPressProjects />} />
+            <Route path="/projects/drupal" element={<DrupalProjects />} />
+            
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

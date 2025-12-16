@@ -10,7 +10,7 @@ const TestimonialsSection = () => {
       role: "E-commerce Store Owner",
       company: "Fashion Hub India",
       rating: 5,
-      content: "GOwithWeb's WordPress hosting is incredible! The free migration was seamless and their 24/7 support helped me set up my online store. Sales increased by 40% due to faster loading times.",
+      content: "SivWebAI's WordPress hosting is incredible! The free migration was seamless and their 24/7 support helped me set up my online store. Sales increased by 40% due to faster loading times.",
       avatar: "PS"
     },
     {
@@ -18,7 +18,7 @@ const TestimonialsSection = () => {
       role: "Digital Marketing Agency",
       company: "WebTech Solutions",
       rating: 5,
-      content: "We manage 50+ client websites on GOwithWeb's reseller hosting. The unlimited bandwidth and free SSL certificates have saved us thousands. Best web hosting India provider!",
+      content: "We manage 50+ client websites on SivWebAI's reseller hosting. The unlimited bandwidth and free SSL certificates have saved us thousands. Best web solutions provider in India!",
       avatar: "RV"
     },
     {
@@ -34,7 +34,7 @@ const TestimonialsSection = () => {
       role: "Blogger & Content Creator", 
       company: "Travel Stories Blog",
       rating: 5,
-      content: "Switched from expensive hosting to GOwithWeb. The free domain registration and cheap hosting with free SSL exceeded expectations. My blog loads 3x faster now!",
+      content: "Switched from expensive hosting to SivWebAI. The free domain registration and affordable hosting with free SSL exceeded expectations. My blog loads 3x faster now!",
       avatar: "VS"
     },
     {
@@ -58,7 +58,7 @@ const TestimonialsSection = () => {
       role: "Marketing Manager",
       company: "Digital Solutions Inc.",
       rating: 5,
-      content: "GOwithWeb's managed WordPress hosting transformed our website performance. The automated backups and security features give us complete peace of mind.",
+      content: "SivWebAI's managed WordPress hosting transformed our website performance. The automated backups and security features give us complete peace of mind.",
       avatar: "KN"
     },
     {
@@ -95,7 +95,7 @@ const TestimonialsSection = () => {
             What Our Customers Say
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Join thousands of satisfied customers who trust GOwithWeb for their web hosting needs. Real reviews from real businesses.
+            Join thousands of satisfied customers who trust SivWebAI for their web solutions needs. Real reviews from real businesses.
           </p>
         </div>
 
