@@ -75,7 +75,7 @@ const FeaturesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Why Choose GOwithWeb?
+            Why Choose SivWebAI?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Premium hosting for businesses with industry-leading features, unmatched support, and incredible value for money.

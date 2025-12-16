@@ -20,9 +20,9 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Support",
-      details: "support@gowithweb.com",
+      details: "support@sivwebai.com",
       description: "Get response within 2 hours",
-      action: "mailto:support@gowithweb.com"
+      action: "mailto:support@sivwebai.com"
     },
     {
       icon: MapPin,
@@ -48,14 +48,14 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - Free Consultation & 24/7 Support | GOwithWeb</title>
-        <meta name="description" content="Contact GOwithWeb for expert web services consultation. Free strategy sessions, 24/7 support, custom quotes, and dedicated project management. Start your digital transformation today with our award-winning team." />
-        <meta name="keywords" content="contact GOwithWeb, web services consultation, free quote, web development support, hosting support, 24/7 support, digital strategy, project consultation" />
-        <link rel="canonical" href="https://gowithweb.com/contact" />
-        <meta property="og:title" content="Contact GOwithWeb - Free Consultation & Expert Support" />
+        <title>Contact Us - Free Consultation & 24/7 Support | SivWebAI</title>
+        <meta name="description" content="Contact SivWebAI for expert web solutions consultation. Free strategy sessions, 24/7 support, custom quotes, and dedicated project management. Start your digital transformation today." />
+        <meta name="keywords" content="contact SivWebAI, web services consultation, free quote, web development support, hosting support, 24/7 support, digital strategy, project consultation" />
+        <link rel="canonical" href="https://sivwebai.com/contact" />
+        <meta property="og:title" content="Contact SivWebAI - Free Consultation & Expert Support" />
         <meta property="og:description" content="Get expert consultation for your web projects. Free strategy sessions and 24/7 support available." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://gowithweb.com/contact" />
+        <meta property="og:url" content="https://sivwebai.com/contact" />
       </Helmet>
 
       <div className="min-h-screen">

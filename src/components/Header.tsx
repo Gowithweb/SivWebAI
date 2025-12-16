@@ -12,11 +12,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="/" className="flex items-center group">
-            <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-2xl group-hover:shadow-rainbow transition-all duration-300 group-hover:scale-110 overflow-hidden">
+            <div className="w-20 h-16 bg-white rounded-xl flex items-center justify-center shadow-2xl group-hover:shadow-rainbow transition-all duration-300 group-hover:scale-105 overflow-hidden px-2">
               <img 
                 src={sivwebaiLogo} 
                 alt="SivWebAI - End-to-End Web Solutions" 
-                className="w-12 h-12 object-contain"
+                className="w-full h-14 object-contain"
               />
             </div>
           </a>
@@ -28,7 +28,7 @@ const Header = () => {
             <a href="/projects" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-secondary after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Projects</a>
             <a href="/ai-services" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-secondary after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">AI Services</a>
             <a href="/tools" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-secondary after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Tools</a>
-            <a href="/team" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-secondary after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">About Us</a>
+            
             <a href="/blog" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-secondary after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Blog</a>
             <a href="/contact" className="relative text-white font-bold text-base hover:text-accent-lime transition-all duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-secondary after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">Contact</a>
           </nav>
@@ -71,7 +71,7 @@ const Header = () => {
               <a href="/projects" className="text-white hover:text-secondary transition-colors font-medium">Projects</a>
               <a href="/ai-services" className="text-white hover:text-secondary transition-colors font-medium">AI Services</a>
               <a href="/tools" className="text-white hover:text-secondary transition-colors font-medium">Tools</a>
-              <a href="/team" className="text-white hover:text-secondary transition-colors font-medium">About Us</a>
+              
               <a href="/blog" className="text-white hover:text-secondary transition-colors font-medium">Blog</a>
               <a href="/contact" className="text-white hover:text-secondary transition-colors font-medium">Contact</a>
               <div className="flex flex-col space-y-2 pt-4 border-t border-white/20">

@@ -61,7 +61,7 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email Us", 
-      content: "support@gowithweb.com",
+      content: "support@sivwebai.com",
       description: "Quick Response Guaranteed"
     },
     {
@@ -236,7 +236,7 @@ const ContactSection = () => {
 
             {/* Trust Badges */}
             <div className="bg-gradient-card rounded-2xl p-6 shadow-custom">
-              <h4 className="font-semibold text-foreground mb-4 text-center">Why Choose GOwithWeb?</h4>
+              <h4 className="font-semibold text-foreground mb-4 text-center">Why Choose SivWebAI?</h4>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <Globe className="w-5 h-5 text-primary" />

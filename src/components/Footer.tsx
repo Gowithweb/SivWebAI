@@ -57,11 +57,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
-              <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center shadow-2xl hover:rotate-6 transition-transform duration-300 overflow-hidden">
+              <div className="w-24 h-16 bg-white rounded-xl flex items-center justify-center shadow-2xl hover:rotate-3 transition-transform duration-300 overflow-hidden px-2">
                 <img 
                   src={sivwebaiLogo} 
                   alt="SivWebAI Logo" 
-                  className="w-14 h-14 object-contain"
+                  className="w-full h-14 object-contain"
                 />
               </div>
             </div>

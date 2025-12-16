@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://gowithweb.com/sitemap.xml
+Sitemap: https://sivwebai.com/sitemap.xml
 
 # Crawl-delay for search engines
 Crawl-delay: 1
@@ -14,20 +14,21 @@ Disallow: /*.json$
 
 # Allow important pages for SEO
 Allow: /
-Allow: /web-hosting
-Allow: /wordpress-hosting
-Allow: /vps-hosting
-Allow: /dedicated-servers
-Allow: /domain-registration
-Allow: /web-development
+Allow: /services
+Allow: /projects
+Allow: /ai-services
+Allow: /tools
+Allow: /blog
 Allow: /contact
-Allow: /about
-Allow: /pricing
-Allow: /support
+Allow: /web-development
+Allow: /technical-support
+Allow: /ssl-security
+Allow: /seo-services
+Allow: /digital-marketing
 
 # Additional sitemaps
-Sitemap: https://gowithweb.com/sitemap-services.xml
-Sitemap: https://gowithweb.com/sitemap-locations.xml
+Sitemap: https://sivwebai.com/sitemap-services.xml
+Sitemap: https://sivwebai.com/sitemap-projects.xml
 
 # Special directives for major search engines
 User-agent: Googlebot
