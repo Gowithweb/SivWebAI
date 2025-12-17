@@ -91,18 +91,18 @@ const AIServices = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/5">
       <Helmet>
-        <title>AI Services | Advanced Artificial Intelligence Solutions - GOwithWeb</title>
-        <meta name="description" content="Transform your business with our cutting-edge AI services. Custom chatbots, machine learning, computer vision, and AI-powered automation solutions." />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, chatbots, computer vision, automation, OpenAI, TensorFlow" />
-        <link rel="canonical" href="https://gowithweb.com/ai-services" />
+        <title>AI Services | Advanced Artificial Intelligence Solutions - SivWebAI</title>
+        <meta name="description" content="Transform your business with our cutting-edge AI services. Custom chatbots, machine learning, computer vision, n8n automation, and AI-powered solutions." />
+        <meta name="keywords" content="AI services India, artificial intelligence, machine learning, chatbots, computer vision, n8n automation, OpenAI, TensorFlow, generative AI, speech AI, vision AI" />
+        <link rel="canonical" href="https://sivwebai.com/ai-services" />
         
-        <meta property="og:title" content="AI Services | Advanced Artificial Intelligence Solutions - GOwithWeb" />
+        <meta property="og:title" content="AI Services | Advanced Artificial Intelligence Solutions - SivWebAI" />
         <meta property="og:description" content="Transform your business with our cutting-edge AI services. Custom chatbots, machine learning, computer vision, and AI-powered automation solutions." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://gowithweb.com/ai-services" />
+        <meta property="og:url" content="https://sivwebai.com/ai-services" />
         
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Services | Advanced Artificial Intelligence Solutions - GOwithWeb" />
+        <meta name="twitter:title" content="AI Services | Advanced Artificial Intelligence Solutions - SivWebAI" />
         <meta name="twitter:description" content="Transform your business with our cutting-edge AI services. Custom chatbots, machine learning, computer vision, and AI-powered automation solutions." />
       </Helmet>
 
@@ -153,10 +153,10 @@ const AIServices = () => {
         </section>
 
         {/* AI Services Grid */}
-        <section className="py-20 bg-muted/30">
+        <section id="generative" className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our AI Services</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Generative AI & AI Tools</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Comprehensive AI solutions tailored to your business needs
               </p>
@@ -197,11 +197,11 @@ const AIServices = () => {
           </div>
         </section>
 
-        {/* Technologies Section */}
-        <section className="py-20">
+        {/* Technologies Section - Vision & Speech */}
+        <section id="vision" className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">AI Technologies We Use</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Vision & Speech AI Technologies</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Leveraging cutting-edge AI frameworks and platforms
               </p>
@@ -222,11 +222,11 @@ const AIServices = () => {
           </div>
         </section>
 
-        {/* Use Cases Section */}
-        <section className="py-20 bg-muted/30">
+        {/* Use Cases Section - Marketing & n8n */}
+        <section id="marketing" className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">AI Use Cases</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">AI Marketing & n8n Automation</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Real-world applications of AI across different industries
               </p>
@@ -253,7 +253,7 @@ const AIServices = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-hero relative overflow-hidden">
+        <section id="n8n" className="py-20 bg-gradient-hero relative overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="container mx-auto px-4 relative text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">

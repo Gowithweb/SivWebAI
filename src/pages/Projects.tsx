@@ -173,14 +173,14 @@ const Projects = () => {
   return (
     <>
       <Helmet>
-        <title>Our Projects - GOwithWeb Portfolio | Successful Web Solutions</title>
+        <title>Our Projects - SivWebAI Portfolio | Successful Web Solutions</title>
         <meta name="description" content="Explore our portfolio of successful web development projects. From e-commerce platforms to enterprise solutions, see how we help businesses succeed online." />
-        <meta name="keywords" content="web development portfolio, project showcase, e-commerce development, enterprise solutions, mobile apps, case studies" />
-        <link rel="canonical" href="https://gowithweb.com/projects" />
+        <meta name="keywords" content="web development portfolio, project showcase, e-commerce development, enterprise solutions, mobile apps, case studies, React projects, Node.js projects" />
+        <link rel="canonical" href="https://sivwebai.com/projects" />
         <meta property="og:title" content="Our Projects - Professional Web Development Portfolio" />
         <meta property="og:description" content="Browse our successful web development projects and see how we transform ideas into digital success stories." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://gowithweb.com/projects" />
+        <meta property="og:url" content="https://sivwebai.com/projects" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/30">

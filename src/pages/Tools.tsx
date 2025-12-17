@@ -149,7 +149,7 @@ const Tools = () => {
 
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
+        <section id="domain" className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-hero opacity-10"></div>
           <div className="container mx-auto px-4 relative">
             <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -186,7 +186,7 @@ const Tools = () => {
         </section>
 
         {/* Search and Filter */}
-        <section className="py-8 bg-muted/30">
+        <section id="speed" className="py-8 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="flex flex-col md:flex-row gap-4 mb-8">
@@ -217,7 +217,7 @@ const Tools = () => {
         </section>
 
         {/* Tools Grid */}
-        <section className="py-20">
+        <section id="seo" className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredTools.map((tool, index) => (
@@ -254,7 +254,7 @@ const Tools = () => {
         </section>
 
         {/* Technology Stack */}
-        <section className="py-20 bg-muted/30">
+        <section id="uptime" className="py-20 bg-muted/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Technologies We Support</h2>
@@ -282,7 +282,7 @@ const Tools = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-hero relative overflow-hidden">
+        <section id="chatbot" className="py-20 bg-gradient-hero relative overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="container mx-auto px-4 relative text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
