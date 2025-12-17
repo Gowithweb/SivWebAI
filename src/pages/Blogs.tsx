@@ -22,6 +22,13 @@ import {
   Star
 } from 'lucide-react';
 import blogHeroNew from '@/assets/blog-hero-new.jpg';
+import featuredPostImg from '@/assets/featured-post.jpg';
+import seoPostImg from '@/assets/seo-post.jpg';
+import responsiveDesignPostImg from '@/assets/responsive-design-post.jpg';
+import ecommerceSecurityPostImg from '@/assets/ecommerce-security-post.jpg';
+import reactVuePostImg from '@/assets/react-vue-post.jpg';
+import digitalMarketingPostImg from '@/assets/digital-marketing-post.jpg';
+import performanceOptimizationPostImg from '@/assets/performance-optimization-post.jpg';
 
 const Blogs = () => {
   const featuredPost = {
@@ -34,7 +41,7 @@ const Blogs = () => {
     views: "3.7k",
     comments: 42,
     category: "Web Development",
-    image: "/src/assets/featured-post.jpg",
+    image: featuredPostImg,
     featured: true
   };
 
@@ -49,7 +56,7 @@ const Blogs = () => {
       views: "2.3k",
       comments: 28,
       category: "SEO",
-      image: "/src/assets/seo-post.jpg",
+      image: seoPostImg,
       tags: ["SEO", "Core Web Vitals", "Google", "Performance"]
     },
     {
@@ -62,7 +69,7 @@ const Blogs = () => {
       views: "1.8k",
       comments: 15,
       category: "Design",
-      image: "/src/assets/responsive-design-post.jpg",
+      image: responsiveDesignPostImg,
       tags: ["CSS", "Grid", "Flexbox", "Responsive"]
     },
     {
@@ -75,7 +82,7 @@ const Blogs = () => {
       views: "1.4k",
       comments: 33,
       category: "Security",
-      image: "/src/assets/ecommerce-security-post.jpg",
+      image: ecommerceSecurityPostImg,
       tags: ["Security", "E-commerce", "SSL", "Payment Processing"]
     },
     {
@@ -88,7 +95,7 @@ const Blogs = () => {
       views: "2.9k",
       comments: 56,
       category: "Development",
-      image: "/src/assets/react-vue-post.jpg",
+      image: reactVuePostImg,
       tags: ["React", "Server Components", "Next.js", "Performance"]
     },
     {
@@ -101,7 +108,7 @@ const Blogs = () => {
       views: "2.1k",
       comments: 41,
       category: "Marketing",
-      image: "/src/assets/digital-marketing-post.jpg",
+      image: digitalMarketingPostImg,
       tags: ["PPC", "Google Ads", "Facebook Ads", "ROI"]
     },
     {
@@ -114,7 +121,7 @@ const Blogs = () => {
       views: "2.7k",
       comments: 38,
       category: "Performance",
-      image: "/src/assets/performance-optimization-post.jpg",
+      image: performanceOptimizationPostImg,
       tags: ["Performance", "Web Vitals", "Speed", "Conversion"]
     }
   ];
@@ -154,24 +161,24 @@ const Blogs = () => {
   return (
     <>
       <Helmet>
-        <title>Web Development Blog - GOwithWeb | Latest Tech Insights & Tutorials</title>
+        <title>Web Development Blog - SivWebAI | Latest Tech Insights & Tutorials</title>
         <meta name="description" content="Stay updated with the latest web development trends, SEO tips, digital marketing strategies, and technology insights. Expert advice for modern businesses." />
         <meta name="keywords" content="web development blog, SEO tips, digital marketing, web design, programming tutorials, technology insights, business growth" />
-        <link rel="canonical" href="https://gowithweb.com/blog" />
+        <link rel="canonical" href="https://sivwebai.com/blog" />
         <meta property="og:title" content="Web Development Blog - Latest Tech Insights & Tutorials" />
         <meta property="og:description" content="Expert advice on web development, SEO, digital marketing, and business growth strategies." />
         <meta property="og:type" content="blog" />
-        <meta property="og:url" content="https://gowithweb.com/blog" />
+        <meta property="og:url" content="https://sivwebai.com/blog" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Blog",
-            "name": "GOwithWeb Blog",
+            "name": "SivWebAI Blog",
             "description": "Web development and digital marketing insights",
-            "url": "https://gowithweb.com/blog",
+            "url": "https://sivwebai.com/blog",
             "publisher": {
               "@type": "Organization",
-              "name": "GOwithWeb"
+              "name": "SivWebAI"
             }
           })}
         </script>
