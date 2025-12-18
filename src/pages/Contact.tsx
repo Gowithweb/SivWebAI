@@ -13,9 +13,9 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone Support",
-      details: "+91 9876543210",
+      details: "+15551535471",
       description: "Available 24/7 for urgent support",
-      action: "tel:+919876543210"
+      action: "tel:+15551535471"
     },
     {
       icon: Mail,

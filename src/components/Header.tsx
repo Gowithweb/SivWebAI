@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Menu, X, Shield, Zap, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import sivwebaiLogo from '@/assets/sivwebai-logo.png';
+
+const sivwebaiLogo = "https://ik.imagekit.io/u9jvapj6d/SivWeb-AI.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
