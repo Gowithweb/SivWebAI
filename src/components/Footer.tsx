@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
-import sivwebaiLogo from '@/assets/sivwebai-logo.png';
+
+const sivwebaiLogo = "https://ik.imagekit.io/u9jvapj6d/SivWeb-AI.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -73,7 +74,7 @@ const Footer = () => {
             <div className="space-y-2 text-sm">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-secondary" />
-                <span className="text-white/80">+91 9876543210</span>
+                <span className="text-white/80">+15551535471</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-secondary" />
