@@ -27,7 +27,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Office Location",
-      details: "Mumbai, Maharashtra, India",
+      details: "Bengaluru, Karnataka, India",
       description: "Visit our office for in-person meetings",
       action: "#"
     },
