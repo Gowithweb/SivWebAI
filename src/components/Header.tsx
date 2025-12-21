@@ -73,22 +73,22 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-foreground via-primary to-secondary backdrop-blur-md border-b border-white/20 shadow-2xl">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.3)]">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 lg:h-18">
           {/* Logo */}
           <a href="/" className="flex items-center group flex-shrink-0">
-            <div className="w-24 h-18 bg-white rounded-xl flex items-center justify-center shadow-2xl group-hover:shadow-rainbow transition-all duration-300 group-hover:scale-105 overflow-hidden p-2">
+            <div className="w-20 h-14 bg-white rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-102 overflow-hidden p-1.5">
               <img 
                 src={sivwebaiLogo} 
                 alt="SivWebAI - End-to-End Web Solutions" 
-                className="w-full h-16 object-contain"
+                className="w-full h-12 object-contain"
               />
             </div>
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
+          <nav className="hidden lg:flex items-center space-x-0.5">
             {navItems.map((item) => (
               <div 
                 key={item.name}
@@ -98,22 +98,22 @@ const Header = () => {
               >
                 <a 
                   href={item.href} 
-                  className="flex items-center gap-1 px-4 py-2 text-white font-bold text-sm hover:text-accent-lime transition-all duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-1 after:bottom-0 after:left-0 after:bg-gradient-to-r after:from-accent-lime after:to-secondary after:rounded-full after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                  className="flex items-center gap-1 px-3 py-2 text-white/90 font-medium text-sm hover:text-white transition-all duration-200 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-secondary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
                 >
                   {item.name}
                   {item.subItems.length > 0 && (
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === item.name ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${openDropdown === item.name ? 'rotate-180' : ''}`} />
                   )}
                 </a>
                 
                 {/* Dropdown Menu */}
                 {item.subItems.length > 0 && openDropdown === item.name && (
-                  <div className="absolute top-full left-0 mt-1 w-56 bg-foreground/95 backdrop-blur-md rounded-xl shadow-2xl border border-white/20 py-2 animate-fade-in z-50">
+                  <div className="absolute top-full left-0 mt-1 w-52 bg-slate-900/98 backdrop-blur-xl rounded-lg shadow-2xl border border-white/10 py-1.5 animate-fade-in z-50">
                     {item.subItems.map((subItem) => (
                       <a
                         key={subItem.name}
                         href={subItem.href}
-                        className="block px-4 py-3 text-white hover:bg-primary/30 hover:text-accent-lime transition-all duration-200 text-sm font-medium"
+                        className="block px-4 py-2.5 text-white/80 hover:bg-white/10 hover:text-white transition-all duration-200 text-sm"
                       >
                         {subItem.name}
                       </a>
@@ -125,21 +125,20 @@ const Header = () => {
           </nav>
 
           {/* Right Side: CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-3">
+          <div className="hidden lg:flex items-center space-x-2">
             <Button 
               variant="outline" 
               onClick={() => window.open('https://client.sivwebai.com', '_blank')}
-              className="group font-black border-white/40 text-white hover:bg-white hover:text-primary"
+              className="group text-sm font-semibold border-white/30 text-white/90 hover:bg-white hover:text-slate-900 px-4 py-2 h-9"
             >
-              <Shield className="w-4 h-4 mr-2 group-hover:animate-pulse" />
+              <Shield className="w-3.5 h-3.5 mr-1.5" />
               Client Portal
             </Button>
             <Button 
-              variant="hero"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="group font-black bg-gradient-to-r from-accent-bright to-warning text-white hover:shadow-accent"
+              className="group text-sm font-semibold bg-secondary hover:bg-secondary/90 text-white px-4 py-2 h-9"
             >
-              <Zap className="w-4 h-4 mr-2 group-hover:animate-bounce" />
+              <Zap className="w-3.5 h-3.5 mr-1.5" />
               Get Started
             </Button>
           </div>
