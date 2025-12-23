@@ -1,197 +1,251 @@
-import { useState } from 'react';
-import { Menu, X, Shield, Zap, ChevronDown } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState, useEffect } from "react";
+import { Menu, X, Shield, Zap, ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
-const sivwebaiLogo = "https://ik.imagekit.io/u9jvapj6d/SivWeb-AI.png";
+const LOGO_URL = "https://ai-agent.gowithweb.in/imgs/SivWebAI2025.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
+  const location = useLocation();
+
   const navItems = [
-    { 
-      name: 'Home', 
-      href: '/',
-      subItems: []
-    },
-    { 
-      name: 'Services', 
-      href: '/services',
+    { name: "Home", href: "/" },
+    {
+      name: "Services",
+      href: "/services",
       subItems: [
-        { name: 'Web Hosting', href: '/services/hosting' },
-        { name: 'Web Design', href: '/services/web-design' },
-        { name: 'Development', href: '/services/development' },
-        { name: 'Security', href: '/services/security' },
-        { name: 'SSL Security', href: '/ssl-security' },
-        { name: 'SEO Services', href: '/seo-services' },
-        { name: 'Digital Marketing', href: '/digital-marketing' },
-      ]
+        { name: "Web Hosting", href: "/services/hosting" },
+        { name: "Web Design", href: "/services/web-design" },
+        { name: "Development", href: "/services/development" },
+        { name: "Security", href: "/services/security" },
+        { name: "SSL Security", href: "/ssl-security" },
+        { name: "SEO Services", href: "/seo-services" },
+        { name: "Digital Marketing", href: "/digital-marketing" },
+      ],
     },
-    { 
-      name: 'Projects', 
-      href: '/projects',
+    {
+      name: "Projects",
+      href: "/projects",
       subItems: [
-        { name: 'React Projects', href: '/projects/react' },
-        { name: 'Node.js Projects', href: '/projects/nodejs' },
-        { name: 'WordPress Projects', href: '/projects/wordpress' },
-        { name: 'Drupal Projects', href: '/projects/drupal' },
-      ]
+        { name: "React Projects", href: "/projects/react" },
+        { name: "Node.js Projects", href: "/projects/nodejs" },
+        { name: "WordPress Projects", href: "/projects/wordpress" },
+        { name: "Drupal Projects", href: "/projects/drupal" },
+      ],
     },
-    { 
-      name: 'AI Services', 
-      href: '/ai-services',
+    {
+      name: "AI Services",
+      href: "/ai-services",
       subItems: [
-        { name: 'Generative AI', href: '/ai-services#generative' },
-        { name: 'Vision AI', href: '/ai-services#vision' },
-        { name: 'Speech AI', href: '/ai-services#speech' },
-        { name: 'AI Marketing', href: '/ai-services#marketing' },
-        { name: 'n8n Automation', href: '/ai-services#n8n' },
-        { name: 'AI Tools', href: '/ai-services#tools' },
-      ]
+        { name: "Generative AI", href: "/ai-services#generative" },
+        { name: "Vision AI", href: "/ai-services#vision" },
+        { name: "Speech AI", href: "/ai-services#speech" },
+        { name: "AI Marketing", href: "/ai-services#marketing" },
+        { name: "n8n Automation", href: "/ai-services#n8n" },
+        { name: "AI Tools", href: "/ai-services#tools" },
+      ],
     },
-    { 
-      name: 'Tools', 
-      href: '/tools',
-      subItems: [
-        { name: 'Domain Checker', href: '/tools#domain' },
-        { name: 'Speed Test', href: '/tools#speed' },
-        { name: 'SEO Analyzer', href: '/tools#seo' },
-        { name: 'Uptime Monitor', href: '/tools#uptime' },
-        { name: 'AI Chatbot', href: '/tools#chatbot' },
-      ]
-    },
-    { 
-      name: 'Blog', 
-      href: '/blog',
-      subItems: []
-    },
-    { 
-      name: 'Contact', 
-      href: '/contact',
-      subItems: []
-    },
+    { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/contact" },
   ];
 
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.3)]">
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-18">
-          {/* Logo */}
-          <a href="/" className="flex items-center group flex-shrink-0">
-            <div className="w-20 h-14 bg-white rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-102 overflow-hidden p-1.5">
-              <img 
-                src={sivwebaiLogo} 
-                alt="SivWebAI - End-to-End Web Solutions" 
-                className="w-full h-12 object-contain"
-              />
-            </div>
-          </a>
+  // Auto-open dropdown when on a subpage
+  useEffect(() => {
+    const active = navItems.find(
+      (item) =>
+        item.subItems && location.pathname.startsWith(item.href)
+    );
+    if (active) {
+      setOpenDropdown(active.name);
+    }
+  }, [location.pathname]);
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-0.5">
+  // Toggle on click (desktop & mobile)
+  const toggleDropdown = (name: string) => {
+    setOpenDropdown((prev) => (prev === name ? null : name));
+  };
+
+  // Close mobile menu on navigation
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
+  return (
+    <header className="fixed top-0 z-50 w-full bg-gradient-to-r from-slate-950 via-primary to-slate-900 backdrop-blur border-b border-white/10">
+      <div className="container mx-auto px-6">
+        <div className="flex h-20 items-center justify-between">
+          {/* LOGO */}
+          <Link to="/" className="flex items-center" onClick={handleLinkClick}>
+            <img
+              src={LOGO_URL}
+              alt="SivWebAI"
+              className="h-12 w-auto drop-shadow-lg hover:scale-105 transition"
+            />
+          </Link>
+
+          {/* DESKTOP NAV */}
+          <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <div 
+              <div
                 key={item.name}
                 className="relative"
-                onMouseEnter={() => item.subItems.length > 0 && setOpenDropdown(item.name)}
-                onMouseLeave={() => setOpenDropdown(null)}
+                onMouseEnter={() => item.subItems && setOpenDropdown(item.name)}
+                onMouseLeave={() => item.subItems && setOpenDropdown(null)}
               >
-                <a 
-                  href={item.href} 
-                  className="flex items-center gap-1 px-3 py-2 text-white/90 font-medium text-sm hover:text-white transition-all duration-200 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-secondary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
-                >
-                  {item.name}
-                  {item.subItems.length > 0 && (
-                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${openDropdown === item.name ? 'rotate-180' : ''}`} />
-                  )}
-                </a>
-                
-                {/* Dropdown Menu */}
-                {item.subItems.length > 0 && openDropdown === item.name && (
-                  <div className="absolute top-full left-0 mt-1 w-52 bg-slate-900/98 backdrop-blur-xl rounded-lg shadow-2xl border border-white/10 py-1.5 animate-fade-in z-50">
-                    {item.subItems.map((subItem) => (
-                      <a
-                        key={subItem.name}
-                        href={subItem.href}
-                        className="block px-4 py-2.5 text-white/80 hover:bg-white/10 hover:text-white transition-all duration-200 text-sm"
-                      >
-                        {subItem.name}
-                      </a>
-                    ))}
+                {item.subItems ? (
+                  <button
+                    onClick={() => toggleDropdown(item.name)}
+                    className={`flex items-center gap-1 font-semibold transition ${
+                      openDropdown === item.name || location.pathname.startsWith(item.href)
+                        ? "text-secondary"
+                        : "text-white hover:text-secondary"
+                    }`}
+                  >
+                    {item.name}
+                    <ChevronDown
+                      size={16}
+                      className={`transition-transform duration-200 ${
+                        openDropdown === item.name ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className={`font-semibold transition ${
+                      location.pathname === item.href
+                        ? "text-secondary"
+                        : "text-white hover:text-secondary"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+
+                {/* DROPDOWN - Fixed gap issue */}
+                {item.subItems && openDropdown === item.name && (
+                  <div className="absolute left-0 top-full mt-1 pt-3 w-60 rounded-xl bg-slate-900 shadow-2xl border border-white/10 overflow-hidden">
+                    <div className="-mt-3 pt-3 bg-slate-900"> {/* Invisible bridge to eliminate gap */}
+                      {item.subItems.map((sub) => (
+                        <Link
+                          key={sub.name}
+                          to={sub.href}
+                          onClick={handleLinkClick}
+                          className="block px-5 py-3 text-sm text-white hover:bg-primary/20 transition"
+                        >
+                          {sub.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
             ))}
           </nav>
 
-          {/* Right Side: CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-2">
-            <Button 
-              variant="outline" 
-              onClick={() => window.open('https://client.sivwebai.com', '_blank')}
-              className="group text-sm font-semibold border-white/30 text-white/90 hover:bg-white hover:text-slate-900 px-4 py-2 h-9"
+          {/* CTA */}
+          <div className="hidden md:flex items-center gap-4">
+            <Button
+              variant="outline"
+              className="border-white/40 text-white"
+              onClick={() => window.open("https://client.sivwebai.com", "_blank")}
             >
-              <Shield className="w-3.5 h-3.5 mr-1.5" />
+              <Shield className="w-4 h-4 mr-2" />
               Client Portal
             </Button>
-            <Button 
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="group text-sm font-semibold bg-secondary hover:bg-secondary/90 text-white px-4 py-2 h-9"
-            >
-              <Zap className="w-3.5 h-3.5 mr-1.5" />
-              Get Started
+
+            <Button className="bg-gradient-to-r from-accent-bright to-warning text-white">
+              <Zap className="w-4 h-4 mr-2" />
+              Get Started Free
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* MOBILE MENU ICON */}
           <button
-            className="lg:hidden text-white hover:text-accent-lime transition-colors"
+            className="md:hidden text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden py-6 border-t border-white/20 bg-foreground/95 backdrop-blur-md">
-            <nav className="flex flex-col space-y-2">
-              {navItems.map((item) => (
-                <div key={item.name}>
-                  <a 
-                    href={item.href} 
-                    className="block py-3 text-white hover:text-accent-lime transition-colors font-bold text-lg"
+      {/* MOBILE MENU */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-slate-900/95 backdrop-blur border-b border-white/10">
+          <nav className="container mx-auto px-6 py-6 flex flex-col gap-4">
+            {navItems.map((item) => (
+              <div key={item.name}>
+                {item.subItems ? (
+                  <button
+                    onClick={() => toggleDropdown(item.name)}
+                    className={`w-full flex items-center justify-between text-left font-semibold py-3 transition ${
+                      openDropdown === item.name || location.pathname.startsWith(item.href)
+                        ? "text-secondary"
+                        : "text-white"
+                    }`}
                   >
                     {item.name}
-                  </a>
-                  {item.subItems.length > 0 && (
-                    <div className="pl-4 space-y-1">
-                      {item.subItems.map((subItem) => (
-                        <a
-                          key={subItem.name}
-                          href={subItem.href}
-                          className="block py-2 text-white/80 hover:text-accent-lime transition-colors text-sm font-medium"
-                        >
-                          • {subItem.name}
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-              
-              <div className="flex flex-col space-y-3 pt-4 border-t border-white/20 mt-4">
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
-                  Client Portal
-                </Button>
-                <Button className="bg-gradient-to-r from-accent-bright to-warning text-white">
-                  Get Started
-                </Button>
+                    <ChevronDown
+                      size={20}
+                      className={`transition-transform duration-200 ${
+                        openDropdown === item.name ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    to={item.href}
+                    onClick={handleLinkClick}
+                    className={`block py-3 font-semibold transition ${
+                      location.pathname === item.href
+                        ? "text-secondary"
+                        : "text-white"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+
+                {/* MOBILE DROPDOWN */}
+                {item.subItems && openDropdown === item.name && (
+                  <div className="ml-6 mt-2 flex flex-col border-l-2 border-white/20 pl-4">
+                    {item.subItems.map((sub) => (
+                      <Link
+                        key={sub.name}
+                        to={sub.href}
+                        onClick={handleLinkClick}
+                        className="block py-2 text-sm text-white/80 hover:text-secondary transition"
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
-            </nav>
-          </div>
-        )}
-      </div>
+            ))}
+
+            {/* Mobile CTAs */}
+            <div className="mt-8 flex flex-col gap-4">
+              <Button
+                variant="outline"
+                className="w-full border-white/40 text-white"
+                onClick={() => window.open("https://client.sivwebai.com", "_blank")}
+              >
+                <Shield className="w-4 h-4 mr-2" />
+                Client Portal
+              </Button>
+              <Button className="w-full bg-gradient-to-r from-accent-bright to-warning text-white">
+                <Zap className="w-4 h-4 mr-2" />
+                Get Started Free
+              </Button>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };
