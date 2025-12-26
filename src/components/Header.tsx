@@ -3,7 +3,7 @@ import { Menu, X, Shield, Zap, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 
-const LOGO_URL = "https://ai-agent.gowithweb.in/imgs/SivWebAI2025.png";
+const LOGO_URL = "https://raw.githubusercontent.com/sivwebai/AI/93c17b3de7a0377c6b22d9dd67055c1f02723a89/SivWebAI2025.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
